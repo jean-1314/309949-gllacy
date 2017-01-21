@@ -6,7 +6,83 @@
   </head>
   <body>
 
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">Базовый HTML и CSS</a>».</p>
+    <header class="main-header">
+
+      <div class="container">
+
+        <nav class="navbar-main">
+          <div class="logo">
+            <a href="#">
+              <img src="http://placehold.it/70x20" alt="Gllacy Shop logo" width="70" height="20">
+            </a>
+          </div>
+          <ul>
+            <li>
+              <a href="#">Каталог</a>
+            </li>
+            <li>
+              <a href="#">Доставка и оплата</a>
+            </li>
+            <li>
+              <a href="#">О Компании</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="navbar-right">
+<!--- Нужно ли обернуть каждую ссылку в div?-->
+          <a class="navbar-search" href="#"></a>
+          <a class="navbar-login" href="#">Вход</a>
+          <a class="navbar-cart" href="#">Пусто</a>
+
+        </div>
+
+        <div class="details">
+          <span class="details-schedule">С 10 до 20, ежедневно</span> <!--- Подойдет ли тут span?-->
+          <br>
+          <span class="details-phone">8 812 450-25-25</span>
+        </div>
+      </div>
+
+      <div class="navbar-dropdown">
+        <ul>
+          <li><strong>Новинки</strong></li>
+          <hr> <!--- Подразумевается ли здесь использование тега <hr>?-->
+          <li>Сливочное</li>
+          <li>Щербеты</li>
+          <li>Фруктовый лёд</li>
+          <li>Мелорин</li>
+        </ul>
+      </div>
+
+      <div class="navbar-search">
+        <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
+          <label>
+            <input type="text" name="search" value="" placeholder="Что ищем?">
+          </label>
+        </form>
+      </div>
+
+      <div class="login-block">
+        <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+          <input type="email" name="email" value="" placeholder="Электронная почта"> <!--- Нужен ли <label>?-->
+          <input type="password" name="password" value="" placeholder="Пароль">
+          <input type="submit" name="login" value="Войти">
+        </form>
+        <a href="#">Забыли пароль?</a>
+        <br>
+        <a href="#">Новая регистрация</a>
+      </div>
+      
+    </header>
+
+    <main>
+    </main>
+
+    <footer>
+    </footer>
+
+    
 
   </body>
 </html>
