@@ -43,7 +43,7 @@
           <span class="details-phone">8 812 450-25-25</span>
         </div>
       </div>
-
+<!--- Поп-апы-->
       <div class="navbar-dropdown">
         <ul>
           <li><strong>Новинки</strong></li>
@@ -76,13 +76,162 @@
       
     </header>
 
-    <main>
+    <main class="container">
+
+      <section class="slider">
+        <h1></h1> <!--Если слайдер реализовываем через JS, h1 оставляем пустым? Стоит ли заголовок и ссылку обернуть в div?-->
+        <a class="btn-slider" href="#">Давайте оба!</a>
+
+        <div class="slider-switcher">
+          <div class="switcher-pin"></div>
+          <div class="switcher-pin"></div>
+          <div class="switcher-pin"></div>
+        </div>
+      </section>
+
+      <section class="specials">
+
+        <div class="specials-left">
+          <h2>Малинка даром!</h2>
+          <p>При покупке 2 кг любого фруктового мороженого добавим в ваш заказ банку малинового варенья бесплатно.</p>
+          <a class="btn-specials" href="#">Хочу варенье!</a>
+        </div>
+
+        <div class="specials-right">
+          <h2>Шоколадки даром!</h2>
+          <p>При покупке 2 кг пломбира добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
+          <a class="btn-specials" href="#">Хочу шоколадки!</a>
+        </div>
+      </section>
+
+      <section class="topsellers">
+
+        <article class="topsellers-item">
+          <div class="item-img"></div>
+          <div class="item-top"></div>
+          <h2>310&#8381;/кг</h2>
+          <a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+        </article>
+
+        <article class="topsellers-item">
+          <div class="item-img"></div>
+          <div class="item-top"></div>
+          <h2>380&#8381;/кг</h2>
+          <a href="#">Сливочно-кофейное с кусочками шоколада</a>
+        </article>
+
+        <article class="topsellers-item">
+          <div class="item-img"></div>
+          <div class="item-top"></div>
+          <h2>355&#8381;/кг</h2>
+          <a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
+        </article>
+
+        <article class="topsellers-item">
+          <div class="item-img"></div>
+          <div class="item-top"></div>
+          <h2>415&#8381;/кг</h2>
+          <a href="#">Сливочное крем-брюле с карамельной подливкой</a>
+        </article>
+      </section>
+
+      <section class="features">
+
+        <h3>Магазин Глейси - это онлайн и офлайн магазин по продаже мороженого собственного производства на развес</h3>
+
+        <div class="features-left"> <!--Имеет ли смысл оборачивать в дивы левую и правую сторону?-->
+          <p class="features-item">
+            Всё наше мороженое изготавливается на собственном производстве 
+            с использованием современного оборудования и проверенных временем технологий.
+          </p>
+          <p class="features-item">
+            Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. 
+            Все дополнительные ингредиенты и добавки произведены из натурального экологически чистого сырья.
+          </p>
+        </div>
+
+        <div class="features-right">
+          <p class="features-item">
+            Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, 
+            с которыми нас связывает долговременное сотрудничество.
+          </p>
+          <p class="features-item">
+            Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке,
+            который не даёт мороженому растаять в пути и позволяет сохранить превосходный вкус.
+          </p>
+        </div>
+      </section>
+
+      <section class="news">
+
+        <div class="news-left">
+          <aside>Новое в нашем блоге</aside> <!--Верно ли семантически использовать здесь <aside>?-->
+          <a href="#">10 способов сервировки фруктовых щербетов к столу</a>
+        </div>
+
+        <div class="news-right">
+          <p>
+            Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. 
+            Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
+          </p>
+          <form class="subscribe-form" action="https://echo.htmlacademy.ru" method="post">
+            <input type="email" name="email" value="" placeholder="Электронная почта"> <!--- Аналогично предыдущему, нужен ли <label>?-->
+            <input class="btn-subscribe" type="submit" name="submit" value="Отправить">
+          </form>
+        </div>
+      </section>
+
+      <section class="address">
+        <div class="address-details"> <!--Имеет ли смысл использовать тег <address> вмето дива?-->
+          <p>Адрес главного офиса и офлайн магазина:</p>
+          <strong>
+            ул. Большая Конюшенная<br>
+            19/8, Санкт-Петербург
+          </strong>
+          <p>Для заказов по телефону:</p>
+          <strong>8 812 450-25-25</strong>
+          <p>(с 10 до 20 ежедневно)</p>
+          <a class="btn-feedback" href="#">Форма обратной связи</a>
+        </div>
+      </section>
+<!--Обратная связь-->
+      <section class="feedback">
+        <h4>Мы обязательно вам ответим!</h4>
+        <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
+          <input type="text" name="name" value="" placeholder="Как вас зовут?"> <!--- Опять же, нужен ли <label>?-->
+          <input type="email" name="email" value="" placeholder="Ваша почта для ответа?">
+          <textarea rows="6" cols="50" value="" placeholder="Напишите что-нибудь..."></textarea>
+          <input class="btn-feedback" type="submit" name="submit" value="Отправить">
+        </form>
+      </section>
     </main>
 
     <footer>
+      <div class="container">
+
+        <section class="footer-social">
+          <a class="social-btn social-btn-tw" href="#"></a>
+          <a class="social-btn social-btn-inst" href="#"></a>
+          <a class="social-btn social-btn-fb" href="#"></a>
+          <a class="social-btn social-btn-vk" href="#"></a>
+        </section>
+
+        <section class="footer-info">
+          <div class="footer-info-left">
+            <a class="info-link" href="#">Для поставщиков</a>
+            <a class="info-link" href="#">О производстве</a>
+          </div>
+          <div class="footer-info-right">
+            <a class="info-link" href="#">Наши документы</a>
+            <a class="info-link" href="#">Экологические стандарты</a>
+          </div>
+        </section>
+
+        <section class="footer-copyright">
+          <img src="http://placehold.it/70x20" alt="htmlacademy logo" width="70" height="20">
+          <span>Сделано в HTML Academy &#169; 2017</span>
+        </section>
+      </div>
     </footer>
-
-    
-
   </body>
 </html>
