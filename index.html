@@ -10,12 +10,13 @@
 
       <div class="container">
 
-        <nav class="navbar-main">
-          <div class="logo">
+        <div class="logo">
             <a href="#">
               <img src="http://placehold.it/70x20" alt="Gllacy Shop logo" width="70" height="20">
             </a>
           </div>
+
+        <nav class="navbar-main">          
           <ul>
             <li>
               <a href="#">Каталог</a>
@@ -27,44 +28,65 @@
               <a href="#">О Компании</a>
             </li>
           </ul>
+<!--- Раскрывающийся список каталога-->
+          <div class="navbar-dropdown">
+            <ul>
+              <li>
+                <a href="#"><strong>Новинки</strong></a>
+              </li>
+              <li>
+                <a href="#">Сливочное</a>
+              </li>
+              <li>
+                <a href="#">Щербеты</a>
+              </li>
+              <li>
+                <a href="#">Фруктовый лёд</a>
+              </li>
+              <li>
+                <a href="#">Мелорин</a>
+              </li>
+            </ul>
+          </div>
         </nav>
 
         <div class="navbar-right">
-<!--- Нужно ли обернуть каждую ссылку в div?-->
-          <a class="navbar-search" href="#"></a>
-          <a class="navbar-login" href="#">Вход</a>
-          <a class="navbar-cart" href="#">Пусто</a>
+
+          <div class="navbar-search">
+            <img src="http://placehold.it/20x20" alt="magnifier-icon" width="20" height="20">
+          </div>
+
+          <div class="navbar-login">
+            <img src="http://placehold.it/30x20" alt="login-icon" width="30" height="20">
+            <span>Вход</span>
+
+          </div>
+
+          <div class="navbar-cart">
+            <img src="http://placehold.it/30x20" alt="cart-icon" width="30" height="20">
+            <span>Пусто</span>
+          </div>
 
         </div>
 
         <div class="details">
-          <span class="details-schedule">С 10 до 20, ежедневно</span> <!--- Подойдет ли тут span?-->
-          <br>
+          <span class="details-schedule">С 10 до 20, ежедневно</span>
           <span class="details-phone">8 812 450-25-25</span>
         </div>
       </div>
-<!--- Поп-апы-->
-      <div class="navbar-dropdown">
-        <ul>
-          <li><strong>Новинки</strong></li>
-          <li>Сливочное</li>
-          <li>Щербеты</li>
-          <li>Фруктовый лёд</li>
-          <li>Мелорин</li>
-        </ul>
-      </div>
-
-      <div class="navbar-search">
+      <!--Поп-апы-->
+<!--- Поп-ап поиска-->
+      <div class="search-popup">
         <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
           <label>
             <input type="search" name="search" value="" placeholder="Что ищем?">
           </label>
         </form>
       </div>
-
+<!--- Поп-ап входа-->
       <div class="login-block">
         <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
-          <input type="email" name="email" value="" placeholder="Электронная почта"> <!--- Нужен ли <label>?-->
+          <input type="email" name="email" value="" placeholder="Электронная почта"> 
           <input type="password" name="password" value="" placeholder="Пароль">
           <input type="submit" name="login" value="Войти">
         </form>
@@ -72,19 +94,18 @@
         <br>
         <a href="#">Новая регистрация</a>
       </div>
-      
     </header>
 
     <main class="container">
 
       <section class="slider">
-        <h1></h1> <!--Если слайдер реализовываем через JS, h1 оставляем пустым? Стоит ли заголовок и ссылку обернуть в div?-->
+        <h1>Крем-брюле и пломбир с малиновым джемом</h1> 
         <a class="btn-slider" href="#">Давайте оба!</a>
 
         <div class="slider-switcher">
-          <div class="switcher-pin"></div>
-          <div class="switcher-pin"></div>
-          <div class="switcher-pin"></div>
+          <input class="switcher-pin" type="radio">
+          <input class="switcher-pin" type="radio">
+          <input class="switcher-pin" type="radio">
         </div>
       </section>
 
@@ -106,28 +127,28 @@
       <section class="topsellers">
 
         <article class="topsellers-item">
-          <div class="item-img"></div>
+          <img src="http://placehold.it/270x270" alt="ice-cream" width="270" height="270">
           <div class="item-top"></div>
           <h2>310&#8381;/кг</h2>
           <a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
         </article>
 
         <article class="topsellers-item">
-          <div class="item-img"></div>
+          <img src="http://placehold.it/270x270" alt="ice-cream" width="270" height="270">
           <div class="item-top"></div>
           <h2>380&#8381;/кг</h2>
           <a href="#">Сливочно-кофейное с кусочками шоколада</a>
         </article>
 
         <article class="topsellers-item">
-          <div class="item-img"></div>
+          <img src="http://placehold.it/270x270" alt="ice-cream" width="270" height="270">
           <div class="item-top"></div>
           <h2>355&#8381;/кг</h2>
           <a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
         </article>
 
         <article class="topsellers-item">
-          <div class="item-img"></div>
+          <img src="http://placehold.it/270x270" alt="ice-cream" width="270" height="270">
           <div class="item-top"></div>
           <h2>415&#8381;/кг</h2>
           <a href="#">Сливочное крем-брюле с карамельной подливкой</a>
@@ -138,7 +159,7 @@
 
         <h3>Магазин Глейси - это онлайн и офлайн магазин по продаже мороженого собственного производства на развес</h3>
 
-        <div class="features-left"> <!--Имеет ли смысл оборачивать в дивы левую и правую сторону?-->
+        <div class="features-left"> 
           <p class="features-item">
             Всё наше мороженое изготавливается на собственном производстве 
             с использованием современного оборудования и проверенных временем технологий.
@@ -164,7 +185,7 @@
       <section class="news">
 
         <div class="news-left">
-          <aside>Новое в нашем блоге</aside> <!--Верно ли семантически использовать здесь <aside>?-->
+          <span>Новое в нашем блоге</span>
           <a href="#">10 способов сервировки фруктовых щербетов к столу</a>
         </div>
 
@@ -174,14 +195,14 @@
             Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
           </p>
           <form class="subscribe-form" action="https://echo.htmlacademy.ru" method="post">
-            <input type="email" name="email" value="" placeholder="Электронная почта"> <!--- Аналогично предыдущему, нужен ли <label>?-->
+            <input type="email" name="email" value="" placeholder="Электронная почта"> 
             <input class="btn-subscribe" type="submit" name="submit" value="Отправить">
           </form>
         </div>
       </section>
 
       <section class="address">
-        <div class="address-details"> <!--Имеет ли смысл использовать тег <address> вмето дива?-->
+        <address class="address-details"> 
           <p>Адрес главного офиса и офлайн магазина:</p>
           <strong>
             ул. Большая Конюшенная<br>
@@ -191,13 +212,13 @@
           <strong>8 812 450-25-25</strong>
           <p>(с 10 до 20 ежедневно)</p>
           <a class="btn-feedback" href="#">Форма обратной связи</a>
-        </div>
+        </address>
       </section>
 <!--Обратная связь-->
       <section class="feedback">
         <h4>Мы обязательно вам ответим!</h4>
         <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
-          <input type="text" name="name" value="" placeholder="Как вас зовут?"> <!--- Опять же, нужен ли <label>?-->
+          <input type="text" name="name" value="" placeholder="Как вас зовут?"> 
           <input type="email" name="email" value="" placeholder="Ваша почта для ответа?">
           <textarea rows="6" cols="50" placeholder="Напишите что-нибудь..."></textarea>
           <input class="btn-feedback" type="submit" name="submit" value="Отправить">
@@ -217,7 +238,7 @@
 
         <section class="footer-info">
           <div class="footer-info-left">
-            <a class="info-link" href="#">Для поставщиков</a>
+            <a class="info-link link-icon" href="#">Для поставщиков</a>
             <a class="info-link" href="#">О производстве</a>
           </div>
           <div class="footer-info-right">

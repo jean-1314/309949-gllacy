@@ -110,35 +110,43 @@
         <h1>Сливочное мороженое</h1>
       </div>
 
-      <aside class="filters">
+      <div class="filters">
 
         <form class="filter-form" action="https://echo.htmlacademy.ru" method="post">
-        <label for="filter-select">Сортировка:</label>
-          <select id="filter-select" name="select">
-            <option value="popular">По популярности</option>
-            <option value="inexpensive">Сначала недорогие</option>
-            <option value="expensive">Сначала дорогие</option>
-            <option value="fat">По жирности</option>
-          </select>
-          <label for="price-range">Цена: 100 руб. — 500 руб.</label>
-          <input id="price-range" type="range" min="100" max="500" step="5">
+
+          <fieldset class="filter-select-container">
+            <legend>Сортировка:</legend>
+            <label for="filter-select"></label>
+            <select id="filter-select" name="select">
+              <option value="popular">По популярности</option>
+              <option value="inexpensive">Сначала недорогие</option>
+              <option value="expensive">Сначала дорогие</option>
+              <option value="fat">По жирности</option>
+            </select>
+          </fieldset>
+
+          <fieldset class="filter-range-container">
+            <legend>Цена: 100 руб. — 500 руб.</legend>
+            <label for="price-range"></label>
+            <input id="price-range" type="range" min="100" max="500" step="5">
+          </fieldset>
 
           <fieldset class="filter-radio">
             <legend>Жирность:</legend>
             <label>
-              <input type="radio" name="zero" value="0%">
+              <input type="radio" name="fatness" value="0%">
               0%
             </label>
             <label>
-              <input type="radio" name="ten" value="10%" checked>
+              <input type="radio" name="fatness" value="10%" checked>
               до 10%
             </label>
             <label>
-              <input type="radio" name="30-" value="<30%">
+              <input type="radio" name="fatness" value="<30%">
               до 30% 
             </label>
             <label>
-              <input type="radio" name="30+" value=">30%">
+              <input type="radio" name="fatness" value=">30%">
               выше 30%
             </label>
           </fieldset>
@@ -169,7 +177,7 @@
 
           <input type="submit" value="Применить">
         </form>
-      </aside>
+      </div>
 
       <section class="catalog">
 
@@ -178,7 +186,7 @@
           <div class="item-top"></div>
           <h2>310&#8381;/кг</h2>
           <a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
-          <a class="btn-item" href="#">Быстрый просмотр</a> <!--Верное ли расположение скрытой кнопки? Или для этого ховера лучше делать отдельный бокс? На всякий случай ставлю кнопку только в одном товаре-->
+          <a class="btn-item" href="#">Быстрый просмотр</a> 
         </article>
 
         <article class="catalog-item">
@@ -186,6 +194,7 @@
           <div class="item-top"></div>
           <h2>380&#8381;/кг</h2>
           <a href="#">Сливочно-кофейное с кусочками шоколада</a>
+          <a class="btn-item" href="#">Быстрый просмотр</a>
         </article>
 
         <article class="catalog-item">
@@ -193,6 +202,7 @@
           <div class="item-top"></div>
           <h2>355&#8381;/кг</h2>
           <a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
+          <a class="btn-item" href="#">Быстрый просмотр</a>
         </article>
 
         <article class="catalog-item">
@@ -200,6 +210,7 @@
           <div class="item-top"></div>
           <h2>415&#8381;/кг</h2>
           <a href="#">Сливочное крем-брюле с карамельной подливкой</a>
+          <a class="btn-item" href="#">Быстрый просмотр</a>
         </article>
         
         <article class="catalog-item">
@@ -207,6 +218,7 @@
           <div class="item-top"></div>
           <h2>325&#8381;/кг</h2>
           <a href="#">Сливочное с брусничным джемом</a>
+          <a class="btn-item" href="#">Быстрый просмотр</a>
         </article>
 
         <article class="catalog-item">
@@ -214,6 +226,7 @@
           <div class="item-top"></div>
           <h2>410&#8381;/кг</h2>
           <a href="#">Сливочно-черничное с цельными ягодами черники</a>
+          <a class="btn-item" href="#">Быстрый просмотр</a>
         </article>
 
         <article class="catalog-item">
@@ -221,6 +234,7 @@
           <div class="item-top"></div>
           <h2>375&#8381;/кг</h2>
           <a href="#">Сливочно-лимонное с карамельной присыпкой</a>
+          <a class="btn-item" href="#">Быстрый просмотр</a>
         </article>
 
         <article class="catalog-item">
@@ -228,6 +242,7 @@
           <div class="item-top"></div>
           <h2>320&#8381;/кг</h2>
           <a href="#">Сливочное с шоколадной стружкой</a>
+          <a class="btn-item" href="#">Быстрый просмотр</a>
         </article>
 
         <article class="catalog-item">
@@ -235,6 +250,7 @@
           <div class="item-top"></div>
           <h2>440&#8381;/кг</h2>
           <a href="#">Сливочно-ванильное с кусочками шоколада</a>
+          <a class="btn-item" href="#">Быстрый просмотр</a>
         </article>
 
         <article class="catalog-item">
@@ -242,6 +258,7 @@
           <div class="item-top"></div>
           <h2>435&#8381;/кг</h2>
           <a href="#">Сливочное с ментоловым сиропом</a>
+          <a class="btn-item" href="#">Быстрый просмотр</a>
         </article>
 
         <article class="catalog-item">
@@ -249,6 +266,7 @@
           <div class="item-top"></div>
           <h2>355&#8381;/кг</h2>
           <a href="#">Сливочное с кусочками чёрного шоколада</a>
+          <a class="btn-item" href="#">Быстрый просмотр</a>
         </article>
 
         <article class="catalog-item">
@@ -256,16 +274,19 @@
           <div class="item-top"></div>
           <h2>420&#8381;/кг</h2>
           <a href="#">Сливочное с мятным сиропом</a>
+          <a class="btn-item" href="#">Быстрый просмотр</a>
         </article>
       </section>
 
       <div class="pagination">
         <ul>
-          <li><a href="#">1</a></li>
+          <li><a href="#">&lt;</a></li>
+          <li><a>1</a></li>
           <li><a href="#">2</a></li>
           <li><a href="#">3</a></li>
           <li><a href="#">4</a></li>
-          <li><a href="#">5</a></li>        
+          <li><a href="#">5</a></li>
+          <li><a href="#">></a></li>        
         </ul>
       </div>
       <hr>      
