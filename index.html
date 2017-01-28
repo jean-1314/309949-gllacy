@@ -9,7 +9,7 @@
 
     <header class="main-header">
 
-      <div class="container">
+      <div class="container clearfix">
 
         <nav class="navbar-main">
 
@@ -61,45 +61,26 @@
           <div class="navbar-login">
             <img src="http://placehold.it/30x20" alt="login-icon" width="30" height="20">
             <span>Вход</span>
-
           </div>
 
           <div class="navbar-cart">
             <img src="http://placehold.it/30x20" alt="cart-icon" width="30" height="20">
             <span>Пусто</span>
           </div>
-        </div>
 
-        <div class="details">
-          <span class="details-schedule">С 10 до 20, ежедневно</span>
-          <span class="details-phone">8 812 450-25-25</span>
+          <div class="details">
+            <span class="details-schedule">С 10 до 20, ежедневно</span>
+            <span class="details-phone">8 812 450-25-25</span>
+          </div>
         </div>
-      </div>
-      <!--Поп-апы-->
-<!--- Поп-ап поиска-->
-      <div class="search-popup">
-        <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
-          <input type="search" name="search" value="" placeholder="Что ищем?">
-        </form>
-      </div>
-<!--- Поп-ап входа-->
-      <div class="login-block">
-        <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
-          <input type="email" name="email" value="" placeholder="Электронная почта"> 
-          <input type="password" name="password" value="" placeholder="Пароль">
-          <input type="submit" name="login" value="Войти">
-        </form>
-        <a href="#">Забыли пароль?</a>
-        <br>
-        <a href="#">Новая регистрация</a>
       </div>
     </header>
 
-    <main class="container">
+    <main class="container clearfix">
 
       <section class="slider">
         <h1>Крем-брюле и пломбир с малиновым джемом</h1> 
-        <a class="btn-slider" href="#">Давайте оба!</a>
+        
 
         <div class="slider-switcher">
           <label>
@@ -112,6 +93,7 @@
             <input type="radio" name="switcher-pin" value="3">
           </label>
         </div>
+        <a class="btn-slider" href="#">Давайте оба!</a>
       </section>
 
       <section class="specials">
@@ -254,5 +236,26 @@
         </section>
       </div>
     </footer>
+
+    <!--Поп-апы-->
+<!--- Поп-ап поиска-->
+      <div class="search-popup">
+        <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
+          <input type="search" name="search" value="" placeholder="Что ищем?">
+        </form>
+      </div>
+<!--- Поп-ап входа-->
+      <div class="login-block">
+        <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+          <input type="email" name="email" value="" placeholder="Электронная почта"> 
+          <input type="password" name="password" value="" placeholder="Пароль">
+          <input type="submit" name="login" value="Войти">
+        </form>
+        <a href="#">Забыли пароль?</a>
+        <br>
+        <a href="#">Новая регистрация</a>
+      </div>
+
+
   </body>
 </html>

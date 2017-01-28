@@ -1,3 +1,18 @@
+/*
+background-color: rgba(255, 246, 6, 0.3); - yellow
+background-color: rgba(6, 255, 12, 0.3); - green
+background-color: rgba(255, 6, 35, 0.3); - red
+background-color: rgba(6, 129, 255, 0.3); - red
+*/
+
+/*Общие*/
+
+html, body {
+  
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-size: 16px;
   line-height: 22px;
@@ -6,12 +21,129 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+.container {
+  width: 1146px;
+  margin: 0 auto;
+  padding: 0 27px;
+  background-color: rgba(6, 255, 12, 0.3);
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 h1 {
   font-size: 60px;
   line-height: 60.35px;
+  margin: 0 auto;
 }
 
 h2 {
   font-size: 35px;
   line-height: 41px;
+  margin: 0;
+}
+
+.main-header {
+  background-color: rgba(255, 246, 6, 0.3);
+  min-height: 73px;
+  min-width: inherit;
+}
+
+.navbar-main {
+  float: left;
+  width: 560px;
+  background-color: rgba(6, 129, 255, 0.3);
+}
+
+.navbar-main ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.logo {
+  width: 155px;
+  margin-top: 9px;
+}
+
+.navbar-right {
+  float: right;
+  width: 267px;
+  text-align: right;
+  margin-top: 23px;
+}
+
+.navbar-right > * {
+  display: inline-block;
+}
+
+.details {
+  min-width: 165px;
+  background-color: rgba(255, 6, 35, 0.3);
+  margin-top: 20px;
+}
+
+.slider {
+  width: 1146px;
+  min-height: 500px;
+}
+
+.slider h1 {
+  width: 700px;
+  padding-top: 287px;
+  padding-bottom: 40px;
+  text-align: center;
+  background-color: rgba(255, 6, 35, 0.3);
+  font-weight: bold;
+}
+
+.btn-slider {
+  display: inline-block;
+  width: 278px;
+  background-color: rgba(6, 129, 255, 0.3);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.slider-switcher {
+  display: inline-block;
+  width: 78px;
+  background-color: rgba(255, 6, 35, 0.3);
+  margin-right: 355px;
+}
+
+.specials {
+  font-size: 0;
+  font-weight: bold;
+}
+
+.specials-left, .specials-right {
+  width: 560px;
+  min-height: 230px;
+  display: inline-block;
+  font-size: 16px;
+  background-color: rgba(255, 246, 6, 0.3);
+  margin-bottom: 40px;
+}
+
+.specials-left {
+  margin-right: 26px;
+}
+
+.specials > * > h2 {
+  margin-top: 20px;
+  margin-bottom: 29px;
+}
+
+.specials > * > p {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.btn-specials {
+  width: 165px;
+  float: right;
 }
