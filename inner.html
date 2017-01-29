@@ -9,7 +9,7 @@
 
     <header class="main-header">
 
-      <div class="container">
+      <div class="container clearfix">
 
         <nav class="navbar-main">
 
@@ -69,86 +69,15 @@
             <span>2 товара</span>
           </div>
 
+          <div class="details">
+            <span class="details-schedule">С 10 до 20, ежедневно</span> 
+            <span class="details-phone">8 812 450-25-25</span>
+          </div>
         </div>
-
-        
       </div>
-
-        <!--Поп-апы-->
-<!--- Поп-ап поиска-->
-        <div class="search-popup">
-          <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
-            <input type="search" name="search" value="" placeholder="Что ищем?">
-          </form>
-        </div>
-<!--- Поп-ап входа-->
-        <div class="login-block">
-          <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
-            <input type="email" name="email" value="" placeholder="Электронная почта"> 
-            <input type="password" name="password" value="" placeholder="Пароль">
-            <input type="submit" name="login" value="Войти">
-          </form>
-          <a href="#">Забыли пароль?</a>
-          <br>
-          <a href="#">Новая регистрация</a>
-        </div>
-<!--- Поп-ап корзины-->
-        <div class="cart-popup">
-          <table class="cart-table">
-
-            <tr>
-              <td>
-                <button class="item-delete"></button>
-              </td>
-              <td>
-                <div class="item-thumbnail"></div>
-              </td>
-              <td>
-                <span>Пломбир с апельсиновым джемом</span>
-              </td>
-              <td>
-                <span>1,5 кг х</span>
-                <i class="item-price">200 руб.</i> 
-              </td>
-              <td>
-                <span>300 руб.</span>
-              </td>
-            </tr>
-
-            <tr>
-              <td>
-                <button class="item-delete"></button>
-              </td>
-              <td>
-                <div class="item-thumbnail"></div>
-              </td>
-              <td>
-                <span>Клубничный пломбир с присыпкой из белого шоколада</span>
-              </td>
-              <td>
-                <span>1,5 кг х</span>
-                <i class="item-price">300 руб.</i> 
-              </td>
-              <td>
-                <span>450 руб.</span>
-              </td>
-            </tr>            
-          </table>
-
-          <hr>
-
-          <strong>Итого: 750 руб.</strong>
-          <a class="btn-order" href="">Оформить заказ</a>
-        </div>
-
-<div class="details">
-          <span class="details-schedule">С 10 до 20, ежедневно</span> 
-          <span class="details-phone">8 812 450-25-25</span>
-        </div>
-
     </header>
 
-    <main class="container">
+    <main class="container clearfix">
 
        <div class="page-title">
         <ul class="breadcrumbs">
@@ -188,49 +117,53 @@
 
           <fieldset class="filter-radio">
             <legend>Жирность:</legend>
-            <label>
-              <input type="radio" name="fatness" value="0%">
-              0%
-            </label>
-            <label>
-              <input type="radio" name="fatness" value="10%" checked>
-              до 10%
-            </label>
-            <label>
-              <input type="radio" name="fatness" value="<30%">
-              до 30% 
-            </label>
-            <label>
-              <input type="radio" name="fatness" value=">30%">
-              выше 30%
-            </label>
+            <div class="filter-radio-container">
+              <label>
+                <input type="radio" name="fatness" value="0%">
+                0%
+              </label>
+              <label>
+                <input type="radio" name="fatness" value="10%" checked>
+                до 10%
+              </label>
+              <label>
+                <input type="radio" name="fatness" value="<30%">
+                до 30% 
+              </label>
+              <label>
+                <input type="radio" name="fatness" value=">30%">
+                выше 30%
+              </label>
+            </div>
           </fieldset>
 
           <fieldset class="filter-checkbox">
             <legend>Наполнители:</legend>
-            <label>
-              <input type="checkbox" name="choco" checked>
-              шоколадные
-            </label>            
-            <label>
-              <input type="checkbox" name="sugar" checked>
-              сахарные присыпки
-            </label>            
-            <label>
-              <input type="checkbox" name="fruit">
-              фрукты
-            </label>            
-            <label>
-              <input type="checkbox" name="syrup">
-              сиропы
-            </label>            
-            <label>
-              <input type="checkbox" name="marmalade">
-              джемы
-            </label>
+            <div class="filter-checkbox-container">
+              <label>
+                <input type="checkbox" name="choco" checked>
+                шоколадные
+              </label>            
+              <label>
+                <input type="checkbox" name="sugar" checked>
+                сахарные присыпки
+              </label>            
+              <label>
+                <input type="checkbox" name="fruit">
+                фрукты
+              </label>            
+              <label>
+                <input type="checkbox" name="syrup">
+                сиропы
+              </label>            
+              <label>
+                <input type="checkbox" name="marmalade">
+                джемы
+              </label>
+            </div>
           </fieldset>
 
-          <input type="submit" value="Применить">
+          <input class="btn-filter" type="submit" value="Применить">
         </form>
       </div>
 
@@ -332,10 +265,10 @@
           <li><a href="#">&gt;</a></li>        
         </ul>
       </div>
-      <hr>      
+      <hr class="bottom-line">      
     </main>
 
-    <footer>
+    <footer class="main-footer">
       <div class="container">
 
         <section class="footer-social">
@@ -362,5 +295,75 @@
         </section>
       </div>
     </footer>
+
+<!--Поп-апы-->
+<!--- Поп-ап поиска-->
+    <div class="search-popup">
+      <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
+        <input type="search" name="search" value="" placeholder="Что ищем?">
+      </form>
+    </div>
+<!--- Поп-ап входа-->
+    <div class="login-block">
+        <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+          <input type="email" name="email" value="" placeholder="Электронная почта"> 
+          <input type="password" name="password" value="" placeholder="Пароль">
+          <input class="btn-login" type="submit" name="login" value="Войти">
+          <div class="login-text">
+            <a href="#">Забыли пароль?</a>
+            <br>
+            <a href="#">Новая регистрация</a>
+          </div>
+        </form>
+      </div>
+<!--- Поп-ап корзины-->
+    <section class="cart-popup">
+      <div class="cart-table">
+        <div class="item-container">
+
+          <div class="item-thumbnail"></div>
+            
+          <div class="item-name">
+            <span>Пломбир с апельсиновым джемом</span>
+          </div>
+
+          <div class="item-quantity">
+            <span>1,5 кг х</span>
+            <i class="item-price">200 руб.</i> 
+          </div>
+
+          <div class="item-value">
+            <span>300 руб.</span>
+          </div>
+
+        </div>
+
+        <div class="item-container">
+
+          <div class="item-thumbnail"></div>
+            
+          <div class="item-name">
+            <span>Клубничный пломбир с присыпкой из белого шоколада</span>
+          </div>
+
+          <div class="item-quantity">
+            <span>1,5 кг х</span>
+            <i class="item-price">300 руб.</i> 
+          </div>
+
+          <div class="item-value">
+            <span>450 руб.</span>
+          </div>
+
+        </div>
+
+      <hr>
+
+      <div class="item-total">
+        <strong>Итого: 750 руб.</strong>
+        <a class="btn-order" href="">Оформить заказ</a>
+      </div>
+    </section>
+
   </body>
 </html>
