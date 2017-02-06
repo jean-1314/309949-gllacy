@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
@@ -13,18 +15,21 @@
 
         <nav class="navbar-main">
 
-          <div class="logo">
-            <a href="#">
-              <img src="img/gllacy-logo.png" alt="Gllacy Shop logo" width="154" height="64">
-            </a>
-          </div>  
+          <ul class="navbar-main-list">
 
-          <ul>
             <li>
-              <a href="#">Каталог</a>
+              <div class="logo">
+                <a href="#">
+                  <img src="img/gllacy-logo.png" alt="Gllacy Shop logo" width="154" height="64">
+                </a>
+              </div>  
+            </li>
+
+            <li>
+              <a class="navbar-link" href="inner.html">Каталог</a>
               <!--- Раскрывающийся список каталога-->
               <div class="navbar-dropdown">
-                <ul>
+                <ul class="navbar-dropdown-list">
                   <li>
                     <a href="#"><strong>Новинки</strong></a>
                   </li>
@@ -44,10 +49,10 @@
               </div>
             </li>
             <li>
-              <a href="#">Доставка и оплата</a>
+              <a class="navbar-link" href="#">Доставка и оплата</a>
             </li>
             <li>
-              <a href="#">О Компании</a>
+              <a class="navbar-link" href="#">О Компании</a>
             </li>
           </ul>
         </nav>
@@ -55,17 +60,15 @@
         <div class="navbar-right">
 
           <div class="navbar-search">
-            <img src="http://placehold.it/20x20" alt="magnifier-icon" width="20" height="20">
+            <a href="#"></a>
           </div>
 
           <div class="navbar-login">
-            <img src="http://placehold.it/30x20" alt="login-icon" width="30" height="20">
-            <span>Вход</span>
+            <a href="#">Вход</a>
           </div>
 
           <div class="navbar-cart">
-            <img src="http://placehold.it/30x20" alt="cart-icon" width="30" height="20">
-            <span>Пусто</span>
+            <a href="#">Пусто</a>
           </div>
 
           <div class="details">
@@ -93,7 +96,7 @@
             <input type="radio" name="switcher-pin" value="3">
           </label>
         </div>
-        <a class="btn-slider" href="#">Давайте оба!</a>
+        <a class="btn btn-slider" href="#">Давайте оба!</a>
       </section>
 
       <section class="specials">
@@ -101,13 +104,13 @@
         <div class="specials-left">
           <h2>Малинка даром!</h2>
           <p>При покупке 2 кг любого фруктового мороженого добавим в ваш заказ банку малинового варенья бесплатно.</p>
-          <a class="btn-specials" href="#">Хочу варенье!</a>
+          <a class="btn btn-specials" href="#">Хочу варенье!</a>
         </div>
 
         <div class="specials-right">
           <h2>Шоколадки даром!</h2>
           <p>При покупке 2 кг пломбира добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-          <a class="btn-specials" href="#">Хочу шоколадки!</a>
+          <a class="btn btn-specials" href="#">Хочу шоколадки!</a>
         </div>
       </section>
 
@@ -117,28 +120,28 @@
           <img src="img/ice-1.jpg" alt="ice-cream" width="267" height="267">
           <h2>310&#8381;/кг</h2>
           <a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
-          <a class="btn-item" href="#">Быстрый просмотр</a> 
+          <a class="btn btn-item" href="#">Быстрый просмотр</a> 
         </article>
 
         <article class="topsellers-item">
           <img src="img/ice-2.jpg" alt="ice-cream" width="267" height="267">
           <h2>380&#8381;/кг</h2>
           <a href="#">Сливочно-кофейное с кусочками шоколада</a>
-          <a class="btn-item" href="#">Быстрый просмотр</a> 
+          <a class="btn btn-item" href="#">Быстрый просмотр</a> 
         </article>
 
         <article class="topsellers-item">
           <img src="img/ice-3.jpg" alt="ice-cream" width="267" height="267">
           <h2>355&#8381;/кг</h2>
           <a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
-          <a class="btn-item" href="#">Быстрый просмотр</a> 
+          <a class="btn btn-item" href="#">Быстрый просмотр</a> 
         </article>
 
         <article class="topsellers-item">
           <img src="img/ice-4.jpg" alt="ice-cream" width="267" height="267">
           <h2>415&#8381;/кг</h2>
           <a href="#">Сливочное крем-брюле с карамельной подливкой</a>
-          <a class="btn-item" href="#">Быстрый просмотр</a> 
+          <a class="btn btn-item" href="#">Быстрый просмотр</a> 
         </article>
       </section>
 
@@ -183,7 +186,7 @@
           </p>
           <form class="subscribe-form" action="https://echo.htmlacademy.ru" method="post">
             <input type="email" name="email" value="" placeholder="Электронная почта"> 
-            <input class="btn-subscribe" type="submit" name="submit" value="Отправить">
+            <input class="btn btn-subscribe" type="submit" name="submit" value="Отправить">
           </form>
         </div>
       </section>
@@ -198,7 +201,7 @@
           <p>Для заказов по телефону:</p>
           <strong>8 812 450-25-25</strong>
           <p>(с 10 до 20 ежедневно)</p>
-          <a class="btn-feedback" href="#">Форма обратной связи</a>
+          <a class="btn btn-feedback" href="#">Форма обратной связи</a>
         </address>
       </section>
     </main>
@@ -243,7 +246,7 @@
         <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
           <input type="email" name="email" value="" placeholder="Электронная почта"> 
           <input type="password" name="password" value="" placeholder="Пароль">
-          <input class="btn-login" type="submit" name="login" value="Войти">
+          <input class="btn btn-login" type="submit" name="login" value="Войти">
           <div class="login-text">
             <a href="#">Забыли пароль?</a>
             <br>
@@ -258,7 +261,7 @@
           <input type="text" name="name" value="" placeholder="Как вас зовут?"> 
           <input type="email" name="email" value="" placeholder="Ваша почта для ответа?">
           <textarea rows="6" cols="50" placeholder="Напишите что-нибудь..."></textarea>
-          <input class="btn-feedback-send" type="submit" name="submit" value="Отправить">
+          <input class="btn btn-feedback-send" type="submit" name="submit" value="Отправить">
         </form>
       </section>
 

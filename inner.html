@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
@@ -12,19 +14,22 @@
       <div class="container clearfix">
 
         <nav class="navbar-main">
-
-          <div class="logo">
-            <a href="#">
-              <img src="img/gllacy-logo.png" alt="Gllacy Shop logo" width="154" height="64">
-            </a>
-          </div>
           
-          <ul>
+          <ul class="navbar-main-list">
+
             <li>
-              <a href="#">Каталог</a>
+              <div class="logo">
+                <a href="index.html">
+                  <img src="img/gllacy-logo.png" alt="Gllacy Shop logo" width="154" height="64">
+                </a>
+              </div>
+            </li>
+
+            <li>
+              <a class="navbar-link link-catalog" href="#">Каталог</a>
               <!--- Раскрывающийся список каталога-->
               <div class="navbar-dropdown">
-                <ul>
+                <ul class="navbar-dropdown-list">
                   <li>
                     <a href="#"><strong>Новинки</strong></a>
                   </li>
@@ -44,10 +49,10 @@
               </div>
             </li>
             <li>
-              <a href="#">Доставка и оплата</a>
+              <a class="navbar-link link-delivery" href="#">Доставка и оплата</a>
             </li>
             <li>
-              <a href="#">О Компании</a>
+              <a class="navbar-link link-about" href="#">О Компании</a>
             </li>
           </ul>
         </nav>
@@ -55,18 +60,15 @@
         <div class="navbar-right">
 
           <div class="navbar-search">
-            <img src="http://placehold.it/20x20" alt="magnifier-icon" width="20" height="20">
+            <a href="#"></a>
           </div>
 
           <div class="navbar-login">
-            <img src="http://placehold.it/30x20" alt="login-icon" width="30" height="20">
-            <span>Вход</span>
-
+            <a href="#">Вход</a>
           </div>
 
-          <div class="navbar-cart">
-            <img src="http://placehold.it/30x20" alt="cart-icon" width="30" height="20">
-            <span>2 товара</span>
+          <div class="navbar-cart cart-full">
+            <a href="#">2 товара</a>
           </div>
 
           <div class="details">
@@ -255,7 +257,7 @@
       </section>
 
       <div class="pagination">
-        <ul>
+        <ul class="pagination-list">
           <li><a href="#">&lt;</a></li>
           <li><a>1</a></li>
           <li><a href="#">2</a></li>
