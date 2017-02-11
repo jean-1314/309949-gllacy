@@ -26,6 +26,10 @@ body > input[type="radio"] {
   transition: background-image 0.5s ease, background-color 0.5s ease;
 }
 
+.inner .site-wrapper {
+  background-image: none;
+}
+
 .site-wrapper::before,
 .site-wrapper::after {
   content: "";
@@ -148,6 +152,15 @@ body > input[type="radio"] {
   color: #000000;
   text-align: center;
   box-shadow: inset 0 2px 1px #8a8a8a;
+}
+
+.link-active {
+  background-color: #d07058;
+  color: #ffffff;
+}
+
+a.navbar-link.link-active::before  {
+  width: 0;
 }
 
 .navbar-dropdown {
@@ -349,7 +362,9 @@ body > input[type="radio"] {
   font-size: 0;
 }
 
+
 /*Переключатель слайдера*/
+
 .slider-switcher label {
   display: inline-block;
   width: 17px;
@@ -362,30 +377,30 @@ body > input[type="radio"] {
   cursor: pointer;
 }
 
-#switcher-1:checked ~ .site-wrapper #slide-1,
-#switcher-2:checked ~ .site-wrapper #slide-2,
-#switcher-3:checked ~ .site-wrapper #slide-3 {
+#switcher-1:checked~.site-wrapper #slide-1,
+#switcher-2:checked~.site-wrapper #slide-2,
+#switcher-3:checked~.site-wrapper #slide-3 {
   display: block;
 }
 
-#switcher-1:checked ~ .site-wrapper {
+#switcher-1:checked~.site-wrapper {
   background-color: #849d8f;
   background-image: url("../img/ice-cream1.png");
 }
 
-#switcher-2:checked ~ .site-wrapper {
+#switcher-2:checked~.site-wrapper {
   background-color: #8996a6;
   background-image: url("../img/ice-cream2.png");
 }
 
-#switcher-3:checked ~ .site-wrapper {
+#switcher-3:checked~.site-wrapper {
   background-color: #9d8b84;
   background-image: url("../img/ice-cream3.png");
 }
 
-#switcher-1:checked ~ .site-wrapper label[for="switcher-1"],
-#switcher-2:checked ~ .site-wrapper label[for="switcher-2"],
-#switcher-3:checked ~ .site-wrapper label[for="switcher-3"] {
+#switcher-1:checked~.site-wrapper label[for="switcher-1"],
+#switcher-2:checked~.site-wrapper label[for="switcher-2"],
+#switcher-3:checked~.site-wrapper label[for="switcher-3"] {
   background-color: #ffffff;
 }
 
@@ -534,7 +549,6 @@ body > input[type="radio"] {
 .item-link:active span {
   color: #ffbc9e;
 }
-
 
 .btn-item {
   position: absolute;
@@ -1238,6 +1252,7 @@ body > input[type="radio"] {
 /*поп-ап корзины*/
 
 .cart-popup {
+  display: none;
   width: 510px;
   min-height: 242px;
   padding-top: 19px;
