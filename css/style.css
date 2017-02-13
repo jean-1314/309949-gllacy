@@ -164,8 +164,74 @@ a.navbar-link.link-active::before  {
   width: 0;
 }
 
+.navbar-main-list li:first-child {
+  position: relative;
+}
+
 .navbar-dropdown {
-  display: none;
+  visibility: hidden;
+  position: absolute;
+  z-index: 2;
+  font-size: 14px;
+  line-height: 16px;
+  padding: 0;
+  width: 143px;
+  min-height: 171px;
+  background-color: #f8f7f4;
+  border-radius: 5px;
+  box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.4);
+}
+
+.dropdown-item {
+  display: block;
+  width: inherit;
+  width: 123px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  cursor: pointer;
+}
+
+.dropdown-link {
+  text-decoration: none;
+  color: #323232;
+  font-weight: normal;
+}
+
+.dropdown-link strong {
+  font-weight: bold;
+  position: relative;
+}
+
+.dropdown-link strong::before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 128px;
+  background-color: rgba(0, 0, 0, 0.2);
+  top: 27px;
+  left: -12px; 
+}
+
+.dropdown-item:hover {
+  background-color: #fbded8;
+}
+
+.dropdown-item:active {
+  background-color: #f6b5a5;
+}
+
+.item-active {
+  background-color: #d07058;
+}
+
+.item-active:hover {
+  background-color: #d07058;
+  cursor: initial;
+}
+
+.dropdown-trigger:hover .navbar-dropdown {
+  visibility: visible;
 }
 
 .logo {
@@ -194,9 +260,12 @@ a.navbar-link.link-active::before  {
   vertical-align: top;
 }
 
+.navbar-search {
+  position: relative;
+}
+
 .navbar-search a {
   display: block;
-  position: relative;
   width: 33px;
   height: 33px;
   background-color: rgba(255, 255, 255, 0.2);
@@ -208,6 +277,10 @@ a.navbar-link.link-active::before  {
   background-color: #ffffff;
 }
 
+.navbar-search a:hover + .search-popup {
+  display: block;
+}
+
 .navbar-search a::before {
   content: "";
   position: absolute;
@@ -216,8 +289,8 @@ a.navbar-link.link-active::before  {
   width: 17px;
   height: 17px;
   background-position: -636px -10px;
-  top: 25%;
-  left: 25%;
+  top: 20%;
+  left: 18%;
 }
 
 .navbar-search a:hover::before {
@@ -226,8 +299,40 @@ a.navbar-link.link-active::before  {
   width: 17px;
   height: 17px;
   background-position: -374px -10px;
-  top: 25%;
-  left: 25%;
+  top: 20%;
+  left: 18%;
+}
+
+.search-popup {
+  position: absolute;
+  display: none;
+  width: 342px;
+  min-height: 64px;
+  padding-top: 20px;
+  background-color: #f8f7f4;
+  border-radius: 5px;
+  font-size: 14px;
+  line-height: 24px;
+  color: #999999;
+  box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.4);
+  z-index: 5;
+  top: 50px;
+  left: -300px;
+}
+
+.search-form {
+  width: 296px;
+  min-height: 44px;
+  margin: 0 auto;
+}
+
+.search-form input {
+  border: 1px solid #d3d3d2;
+  border-radius: 5px;
+  display: block;
+  width: inherit;
+  min-height: inherit;
+  padding-left: 14px;
 }
 
 .navbar-login,
@@ -239,9 +344,14 @@ a.navbar-link.link-active::before  {
 
 .navbar-login {
   margin-right: 10px;
+  position: relative;
 }
 
-.navbar-login a {
+.login-button:hover + .login-block {
+  display: block;
+}
+
+.login-button {
   position: relative;
   display: block;
   width: 77px;
@@ -254,12 +364,12 @@ a.navbar-link.link-active::before  {
   padding-right: 15px;
 }
 
-.navbar-login a:hover {
+.login-button:hover {
   background-color: #ffffff;
   color: #000000;
 }
 
-.navbar-login a::before {
+.login-button::before {
   position: absolute;
   content: "";
   background-image: url("../img/sprite.png");
@@ -271,7 +381,7 @@ a.navbar-link.link-active::before  {
   left: 18%;
 }
 
-.navbar-login a:hover::before {
+.login-button:hover::before {
   background-image: url("../img/sprite.png");
   background-repeat: no-repeat;
   width: 21px;
@@ -280,6 +390,71 @@ a.navbar-link.link-active::before  {
   top: 20%;
   left: 18%;
 }
+
+.login-block {
+  position: absolute;
+  display: none;
+  width: 277px;
+  min-height: 214px;
+  background-color: #f8f7f4;
+  box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+  top: 130%;
+  right: -5%;
+  z-index: 5;
+}
+
+.login-form {
+  min-height: inherit;
+}
+
+.login-form input[type="email"],
+.login-form input[type="password"] {
+  width: 222px;
+  min-height: 44px;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  border: 1px solid #d3d3d2;
+  border-radius: 5px;
+  padding: 0;
+  padding-left: 14px;
+}
+
+.btn-login {
+  width: 102px;
+  min-height: 46px;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 14px;
+  border: 0;
+  padding: 0;
+  border-radius: 25px;
+}
+
+.login-text {
+  display: inline-block;
+  width: 130px;
+  font-size: 13px;
+  line-height: 24px;
+  vertical-align: top;
+  margin-top: 14px;
+  margin-left: 14px;
+  text-align: left;
+}
+
+.login-text a {
+  color: #323232;
+  font-weight: 400;
+}
+
+.login-text a:hover {
+  color: #e84d37;
+}
+
+.login-text a:active {
+  color: #e84d37;
+} 
 
 .navbar-cart {
   width: 117px;
@@ -794,14 +969,68 @@ a.navbar-link.link-active::before  {
   max-width: 510px;
 }
 
+.subscribe-form {
+  position: relative;
+}
+
 .subscribe-form input[type="email"] {
-  width: 365px;
+  width: 352px;
   height: 40px;
   margin-left: 21px;
   margin-right: 11px;
+  padding-left: 14px;
   border-radius: 5px;
   border: 1px solid #d3d3d2;
 }
+
+.subscribe-form input[type="email"]:hover {
+  border: 2px solid #c7c6c5;
+  width: 350px;
+}
+
+.subscribe-form input[type="email"]:focus {
+  width: 350px;
+  border: 2px solid #8fbdec;
+  color: #323232;
+  font-weight: bold;
+  outline: none;
+}
+
+.subscribe-form label {
+  display: none;
+  position: absolute;
+  color: #8fbdec;
+  width: inherit;
+  height: 20px;
+  font-size: 11px;
+  line-height: 13px;
+  top: -20px;
+  left: 40px;;
+}
+
+input[type="email"]:focus + label {
+  display: block;
+}
+
+/*Скрытие плейсхолдера*/
+
+:focus::-webkit-input-placeholder {
+  color: transparent
+}
+ 
+:focus::-moz-placeholder {
+  color: transparent
+}
+ 
+:focus:-moz-placeholder {
+  color: transparent
+}
+ 
+:focus:-ms-input-placeholder {
+  color: transparent
+}
+
+/*=============*/
 
 .btn-subscribe {
   text-shadow: none;
@@ -1085,67 +1314,6 @@ a.navbar-link.link-active::before  {
 
 
 /*поп-апы*/
-
-.search-popup {
-  display: none;
-  width: 342px;
-  min-height: 64px;
-  padding-top: 20px;
-}
-
-.search-form {
-  width: 310px;
-  min-height: 44px;
-  margin: 0 auto;
-}
-
-.search-form input {
-  display: block;
-  width: inherit;
-  min-height: inherit;
-}
-
-.login-block {
-  display: none;
-  width: 277px;
-  min-height: 214px;
-}
-
-.login-form {
-  min-height: inherit;
-  font-size: 0;
-}
-
-.login-form input[type="email"],
-.login-form input[type="password"] {
-  width: 241px;
-  min-height: 44px;
-  margin-top: 20px;
-  margin-left: 19px;
-  border: 1px;
-  padding: 0;
-}
-
-.btn-login {
-  width: 102px;
-  min-height: 46px;
-  display: inline-block;
-  vertical-align: top;
-  margin-top: 14px;
-  border: 0;
-  padding: 0;
-}
-
-.login-text {
-  display: inline-block;
-  width: 130px;
-  font-size: 13px;
-  line-height: 24px;
-  vertical-align: top;
-  margin-top: 14px;
-  margin-left: 19px;
-}
-
 .feedback {
   display: none;
   width: 454px;

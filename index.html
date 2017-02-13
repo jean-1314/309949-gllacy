@@ -29,28 +29,28 @@
             </div>
 
             <ul class="navbar-main-list">
-              <li>
-                <a class="navbar-link" href="inner.html">Каталог</a>
+              <li class="dropdown-trigger">
+                <a class="navbar-link" href="#">Каталог</a>
                 <!--- Раскрывающийся список каталога-->
-                <div class="navbar-dropdown">
-                  <ul class="navbar-dropdown-list">
-                    <li>
-                      <a href="#"><strong>Новинки</strong></a>
-                    </li>
-                    <li>
-                      <a href="#">Сливочное</a>
-                    </li>
-                    <li>
-                      <a href="#">Щербеты</a>
-                    </li>
-                    <li>
-                      <a href="#">Фруктовый лёд</a>
-                    </li>
-                    <li>
-                      <a href="#">Мелорин</a>
-                    </li>
-                  </ul>
-                </div>
+                
+                <ul class="navbar-dropdown">
+                  <li class="dropdown-item">
+                    <a class="dropdown-link" href="#"><strong>Новинки</strong></a>
+                  </li>
+                  <li class="dropdown-item">
+                    <a class="dropdown-link" href="inner.html">Сливочное</a>
+                  </li>
+                  <li class="dropdown-item">
+                    <a class="dropdown-link" href="#">Щербеты</a>
+                  </li>
+                  <li class="dropdown-item">
+                    <a class="dropdown-link" href="#">Фруктовый лёд</a>
+                  </li>
+                  <li class="dropdown-item">
+                    <a class="dropdown-link" href="#">Мелорин</a>
+                  </li>
+                </ul>
+                
               </li>
               <li>
                 <a class="navbar-link" href="#">Доставка и оплата</a>
@@ -65,10 +65,27 @@
 
             <div class="navbar-search">
               <a href="#"></a>
+              <div class="search-popup">
+                <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
+                  <input type="search" name="search" value="" placeholder="Что ищем?">
+                </form>
+              </div>
             </div>
 
             <div class="navbar-login">
-              <a href="#">Вход</a>
+              <a class="login-button" href="#">Вход</a>
+              <div class="login-block">
+                <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+                  <input type="email" name="email" value="" placeholder="Электронная почта">
+                  <input type="password" name="password" value="" placeholder="Пароль">
+                  <input class="btn btn-login" type="submit" name="login" value="Войти">
+                  <div class="login-text">
+                    <a href="#">Забыли пароль?</a>
+                    <br>
+                    <a href="#">Новая регистрация</a>
+                  </div>
+                </form>
+              </div>
             </div>
 
             <div class="navbar-cart">
@@ -188,7 +205,8 @@
               Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
             </p>
             <form class="subscribe-form" action="https://echo.htmlacademy.ru" method="post">
-              <input type="email" name="email" value="" placeholder="Электронная почта">
+              <input id="email" type="email" name="email" value="" placeholder="Электронная почта">
+              <label for="email">Электронная почта</label>
               <input class="btn btn-subscribe" type="submit" name="submit" value="Отправить">
             </form>
           </div>
@@ -238,24 +256,9 @@
 
       <!--Поп-апы-->
       <!--- Поп-ап поиска-->
-      <div class="search-popup">
-        <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
-          <input type="search" name="search" value="" placeholder="Что ищем?">
-        </form>
-      </div>
+      
       <!--- Поп-ап входа-->
-      <div class="login-block">
-        <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
-          <input type="email" name="email" value="" placeholder="Электронная почта">
-          <input type="password" name="password" value="" placeholder="Пароль">
-          <input class="btn btn-login" type="submit" name="login" value="Войти">
-          <div class="login-text">
-            <a href="#">Забыли пароль?</a>
-            <br>
-            <a href="#">Новая регистрация</a>
-          </div>
-        </form>
-      </div>
+      
       <!--Обратная связь-->
       <section class="feedback">
         <strong>Мы обязательно вам ответим!</strong>

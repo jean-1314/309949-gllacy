@@ -26,28 +26,26 @@
             </div>
 
             <ul class="navbar-main-list">
-              <li>
+              <li class="dropdown-trigger">
                 <a class="navbar-link link-active" href="#">Каталог</a>
                 <!--- Раскрывающийся список каталога-->
-                <div class="navbar-dropdown">
-                  <ul class="navbar-dropdown-list">
-                    <li>
-                      <a href="#"><strong>Новинки</strong></a>
-                    </li>
-                    <li>
-                      <a>Сливочное</a>
-                    </li>
-                    <li>
-                      <a href="#">Щербеты</a>
-                    </li>
-                    <li>
-                      <a href="#">Фруктовый лёд</a>
-                    </li>
-                    <li>
-                      <a href="#">Мелорин</a>
-                    </li>
-                  </ul>
-                </div>
+                <ul class="navbar-dropdown">
+                  <li class="dropdown-item">
+                    <a class="dropdown-link" href="#"><strong>Новинки</strong></a>
+                  </li>
+                  <li class="dropdown-item item-active">
+                    <a class="dropdown-link">Сливочное</a>
+                  </li>
+                  <li class="dropdown-item">
+                    <a class="dropdown-link" href="#">Щербеты</a>
+                  </li>
+                  <li class="dropdown-item">
+                    <a class="dropdown-link" href="#">Фруктовый лёд</a>
+                  </li>
+                  <li class="dropdown-item">
+                    <a class="dropdown-link" href="#">Мелорин</a>
+                  </li>
+                </ul>
               </li>
               <li>
                 <a class="navbar-link" href="#">Доставка и оплата</a>
@@ -62,10 +60,27 @@
 
             <div class="navbar-search">
               <a href="#"></a>
+              <div class="search-popup">
+                <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
+                  <input type="search" name="search" value="" placeholder="Что ищем?">
+                </form>
+              </div>
             </div>
 
             <div class="navbar-login">
-              <a href="#">Вход</a>
+              <a class="login-button" href="#">Вход</a>
+              <div class="login-block">
+                <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+                  <input type="email" name="email" value="" placeholder="Электронная почта">
+                  <input type="password" name="password" value="" placeholder="Пароль">
+                  <input class="btn btn-login" type="submit" name="login" value="Войти">
+                  <div class="login-text">
+                    <a href="#">Забыли пароль?</a>
+                    <br>
+                    <a href="#">Новая регистрация</a>
+                  </div>
+                </form>
+              </div>
             </div>
 
             <div class="navbar-cart cart-full">
@@ -85,7 +100,7 @@
         <div class="page-title">
           <ul class="breadcrumbs">
             <li class="breadcrumbs-item">
-              <a class="breadcrumbs-item-link" href="#"><span>Главная</span></a>
+              <a class="breadcrumbs-item-link" href="index.html"><span>Главная</span></a>
             </li>
             <li class="breadcrumbs-item">
               <a class="breadcrumbs-item-link" href="#"><span>Каталог</span></a>
@@ -307,25 +322,7 @@
       </footer>
 
       <!--Поп-апы-->
-      <!--- Поп-ап поиска-->
-      <div class="search-popup">
-        <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
-          <input type="search" name="search" value="" placeholder="Что ищем?">
-        </form>
-      </div>
-      <!--- Поп-ап входа-->
-      <div class="login-block">
-        <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
-          <input type="email" name="email" value="" placeholder="Электронная почта">
-          <input type="password" name="password" value="" placeholder="Пароль">
-          <input class="btn-login" type="submit" name="login" value="Войти">
-          <div class="login-text">
-            <a href="#">Забыли пароль?</a>
-            <br>
-            <a href="#">Новая регистрация</a>
-          </div>
-        </form>
-      </div>
+    
       <!--- Поп-ап корзины-->
       <section class="cart-popup">
         <div class="cart-table">
