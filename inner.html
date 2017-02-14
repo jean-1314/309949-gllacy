@@ -62,7 +62,7 @@
               <a href="#"></a>
               <div class="search-popup">
                 <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
-                  <input type="search" name="search" value="" placeholder="Что ищем?">
+                  <input type="search" name="search" value="">
                 </form>
               </div>
             </div>
@@ -71,8 +71,8 @@
               <a class="login-button" href="#">Вход</a>
               <div class="login-block">
                 <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
-                  <input type="email" name="email" value="" placeholder="Электронная почта">
-                  <input type="password" name="password" value="" placeholder="Пароль">
+                  <input type="email" name="email" value="">
+                  <input type="password" name="password" value="">
                   <input class="btn btn-login" type="submit" name="login" value="Войти">
                   <div class="login-text">
                     <a href="#">Забыли пароль?</a>
@@ -84,7 +84,49 @@
             </div>
 
             <div class="navbar-cart cart-full">
-              <a href="#">2 товара</a>
+              <a class="cart-full-link" href="#">2 товара</a>
+              <!--- Поп-ап корзины-->
+              <section class="cart-popup">
+                
+                <div class="item-container">
+                  <div class="item-thumbnail">
+                    <img src="img/ice-1.jpg" alt="ice-cream thumbnail" width="33px" height="33px">
+                  </div>
+                  <div class="item-name">
+                    <span>Пломбир с апельсиновым джемом</span>
+                  </div>
+                  <div class="item-quantity">
+                    <span>1,5 кг х</span>
+                    <i class="item-price">200 руб.</i>
+                  </div>
+                  <div class="item-value">
+                    <span>300 руб.</span>
+                  </div>
+                </div>
+
+                <div class="item-container">
+                  <div class="item-thumbnail">
+                    <img src="img/ice-3.jpg" alt="ice-cream thumbnail" width="33px" height="33px">
+                  </div>
+                  <div class="item-name">
+                    <span>Клубничный пломбир с присыпкой из белого шоколада</span>
+                  </div>
+                  <div class="item-quantity">
+                    <span>1,5 кг х</span>
+                    <i class="item-price">300 руб.</i>
+                  </div>
+                  <div class="item-value">
+                    <span>450 руб.</span>
+                  </div>
+                </div>
+
+                <hr>
+
+                <div class="item-total">
+                  <strong>Итого: 750 руб.</strong>
+                  <a class="btn btn-order" href="">Оформить заказ</a>
+                </div>
+              </section>
             </div>
 
             <div class="details details-inner">
@@ -119,7 +161,7 @@
 
               <fieldset class="filter-select-container">
                 <legend>Сортировка:</legend>
-                <label for="filter-select"><span>По популярности</span></label>
+                <label for="filter-select"></label>
                 <select id="filter-select" name="select">
                     <option value="popular">По популярности</option>
                     <option value="inexpensive">Сначала недорогие</option>
@@ -318,62 +360,10 @@
             <img src="img/academy-logo.png" alt="htmlacademy logo" width="108" height="38">
             <span>Сделано в <a class="copyright-link" href="https://htmlacademy.ru/"><span>HTML Academy</span></a> &#169; 2017</span>
           </section>
-        </div>
+        
       </footer>
-
-      <!--Поп-апы-->
-    
-      <!--- Поп-ап корзины-->
-      <section class="cart-popup">
-        <div class="cart-table">
-          <div class="item-container">
-
-            <div class="item-thumbnail"></div>
-
-            <div class="item-name">
-              <span>Пломбир с апельсиновым джемом</span>
-            </div>
-
-            <div class="item-quantity">
-              <span>1,5 кг х</span>
-              <i class="item-price">200 руб.</i>
-            </div>
-
-            <div class="item-value">
-              <span>300 руб.</span>
-            </div>
-
-          </div>
-
-          <div class="item-container">
-
-            <div class="item-thumbnail"></div>
-
-            <div class="item-name">
-              <span>Клубничный пломбир с присыпкой из белого шоколада</span>
-            </div>
-
-            <div class="item-quantity">
-              <span>1,5 кг х</span>
-              <i class="item-price">300 руб.</i>
-            </div>
-
-            <div class="item-value">
-              <span>450 руб.</span>
-            </div>
-
-          </div>
-
-          <hr>
-
-          <div class="item-total">
-            <strong>Итого: 750 руб.</strong>
-            <a class="btn-order" href="">Оформить заказ</a>
-          </div>
-      </section>
-      </div>
     </div>
-
+  </div>
 </body>
 
 </html>

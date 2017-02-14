@@ -67,7 +67,7 @@
               <a href="#"></a>
               <div class="search-popup">
                 <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
-                  <input type="search" name="search" value="" placeholder="Что ищем?">
+                  <input type="search" name="search" value="">
                 </form>
               </div>
             </div>
@@ -76,8 +76,8 @@
               <a class="login-button" href="#">Вход</a>
               <div class="login-block">
                 <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
-                  <input type="email" name="email" value="" placeholder="Электронная почта">
-                  <input type="password" name="password" value="" placeholder="Пароль">
+                  <input type="email" name="email" value="">
+                  <input type="password" name="password" value="">
                   <input class="btn btn-login" type="submit" name="login" value="Войти">
                   <div class="login-text">
                     <a href="#">Забыли пароль?</a>
@@ -89,7 +89,7 @@
             </div>
 
             <div class="navbar-cart">
-              <a href="#">Пусто</a>
+              <a class="cart-empty-link" href="#">Пусто</a>
             </div>
 
             <div class="details">
@@ -201,31 +201,36 @@
           </div>
 
           <div class="news-right">
-            <p>
-              Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
-            </p>
-            <form class="subscribe-form" action="https://echo.htmlacademy.ru" method="post">
-              <input id="email" type="email" name="email" value="" placeholder="Электронная почта">
-              <label for="email">Электронная почта</label>
-              <input class="btn btn-subscribe" type="submit" name="submit" value="Отправить">
-            </form>
+            <div class="post-border">
+              <p>
+                Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
+              </p>
+              <form class="subscribe-form" action="https://echo.htmlacademy.ru" method="post">
+                <input id="email" type="email" name="email" value="" required>
+                <label for="email">Электронная почта</label>
+                <input class="btn btn-subscribe" type="submit" name="submit" value="Отправить">
+              </form>
+            </div>
           </div>
         </section>
-
-        <section class="address">
-          <address class="address-details"> 
-              <p>Адрес главного офиса и офлайн магазина:</p>
-              <strong>
-                ул. Большая Конюшенная<br>
-                19/8, Санкт-Петербург
-              </strong>
-              <p>Для заказов по телефону:</p>
-              <strong>8 812 450-25-25</strong>
-              <p>(с 10 до 20 ежедневно)</p>
-              <a class="btn btn-feedback" href="#">Форма обратной связи</a>
-            </address>
-        </section>
       </main>
+    </div>
+
+    <section class="address">
+      <address class="address-details"> 
+        <p>Адрес главного офиса и офлайн магазина:</p>
+        <strong>
+          ул. Большая Конюшенная<br>
+          19/8, Санкт-Петербург
+        </strong>
+        <p>Для заказов по телефону:</p>
+        <strong>8 812 450-25-25</strong>
+        <p>(с 10 до 20 ежедневно)</p>
+        <a class="btn btn-feedback" href="#">Форма обратной связи</a>
+      </address>
+    </section>
+
+    <div class="content-wrapper">
 
       <footer class="main-footer">
 
@@ -251,27 +256,23 @@
           <img src="img/academy-logo.png" alt="htmlacademy logo" width="108" height="38">
           <span>Сделано в <a class="copyright-link" href="https://htmlacademy.ru/"><span>HTML Academy</span></a> &#169; 2017</span>
         </section>
-
       </footer>
-
-      <!--Поп-апы-->
-      <!--- Поп-ап поиска-->
-      
-      <!--- Поп-ап входа-->
-      
-      <!--Обратная связь-->
-      <section class="feedback">
-        <strong>Мы обязательно вам ответим!</strong>
-        <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
-          <input type="text" name="name" value="" placeholder="Как вас зовут?">
-          <input type="email" name="email" value="" placeholder="Ваша почта для ответа?">
-          <textarea rows="6" cols="50" placeholder="Напишите что-нибудь..."></textarea>
-          <input class="btn btn-feedback-send" type="submit" name="submit" value="Отправить">
-        </form>
-      </section>
-
     </div>
-  </div>
-</body>
+      
+    <!--Обратная связь-->
+    <section class="feedback">
+      <strong>Мы обязательно вам ответим!</strong>
+      <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
+        <input type="text" name="name" value="">
+        <input type="email" name="email" value="">
+        <textarea rows="6" cols="50"></textarea>
+        <input class="btn btn-feedback-send" type="submit" name="submit" value="Отправить">
+      </form>
+      <button class="feedback-close" type="button" title="Закрыть">Закрыть</button>
+    </section>
 
+    
+  </div>
+  <div class="modal-overlay"></div>
+</body>
 </html>

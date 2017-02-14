@@ -466,9 +466,10 @@ a.navbar-link.link-active::before  {
 
 .cart-full {
   background-color: #ffffff;
+  position: relative;
 }
 
-.navbar-cart a {
+.cart-empty-link{
   position: relative;
   display: block;
   color: #ffffff;
@@ -477,12 +478,7 @@ a.navbar-link.link-active::before  {
   padding-left: 13px;
 }
 
-.cart-full a {
-  color: #000000;
-  padding-left: 25px;
-}
-
-.navbar-cart a::before {
+.cart-empty-link::before {
   position: absolute;
   content: "";
   background-image: url("../img/sprite.png");
@@ -494,7 +490,16 @@ a.navbar-link.link-active::before  {
   left: 15%;
 }
 
-.cart-full a::before {
+.cart-full-link {
+  position: relative;
+  display: block;
+  color: #000000;
+  padding-left: 25px;
+  text-decoration: none;
+  padding-top: 8px;
+}
+
+.cart-full-link::before {
   position: absolute;
   content: "";
   background-image: url("../img/sprite.png");
@@ -504,6 +509,125 @@ a.navbar-link.link-active::before  {
   background-position: -10px -10px;
   top: 23%;
   left: 13%;
+}
+
+.cart-full:hover .cart-popup {
+  display: block;
+}
+
+/*поп-ап корзины*/
+
+.cart-popup {
+  position: absolute;
+  display: none;
+  width: 510px;
+  min-height: 242px;
+  padding-top: 19px;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: #f8f7f4;
+  border-radius: 5px;
+  box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.4);
+  top: 50px;
+  left: -400px;
+  z-index: 10;
+}
+
+.item-container {
+  margin-bottom: 20px;
+  font-size: 0;
+}
+
+.item-thumbnail,
+.item-name,
+.item-quantity,
+.item-value {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 30px;
+}
+
+.item-thumbnail {
+  position: relative;
+  padding-left: 27px;
+  width: 33px;
+  min-height: 33px;
+  margin-right: 13px;
+  cursor: pointer;
+}
+
+.item-thumbnail::before,
+.item-thumbnail::after {
+  content: "";
+  position: absolute;
+  left: 1px;
+  top: 15px;
+  width: 13px;
+  height: 2px;
+  background-color: #515050;
+  border-radius: 1px;
+}
+
+.item-thumbnail::before {
+  transform: rotate(45deg);
+}
+
+.item-thumbnail::after {
+  transform: rotate(-45deg);
+}
+
+.item-thumbnail img {
+  border-radius: 50%;
+}
+
+.item-name {
+  width: 223px;
+  padding-top: 12px;
+  font-size: 13px;
+  line-height: 16px;
+  text-align: left;
+}
+
+.item-quantity {
+  padding-top: 12px;
+  font-size: 13px;
+  line-height: 16px;
+  margin-right: 10px; 
+}
+
+.item-value {
+  padding-top: 12px;
+  font-size: 13px;
+  line-height: 16px;
+  margin-right: 0;
+  padding-right: 20px
+}
+
+.item-price {
+  font-style: normal;
+  color: #999999;
+}
+
+.item-total {
+  min-width: 170px;
+  float: right;
+  text-align: right;
+  margin-top: 16px;
+}
+
+.cart-popup strong {
+  display: block;
+  margin-bottom: 16px;
+}
+
+.btn-order {
+  display: block;
+  text-align: center;
+  padding: 10px 15px;
+  border-radius: 25px;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: bold;
 }
 
 .navbar-right-inner {
@@ -954,16 +1078,24 @@ a.navbar-link.link-active::before  {
 
 .news-right {
   width: 550px;
-  min-height: 210px;
+  min-height: 200px;
+  padding: 5px;
+  background-image: url("../img/post-border.png");
   background-color: #f8f7f4;
-  border: 5px solid transparent;
-  border-image-source: url("../img/post-border.png");
-  border-image-slice: 4;
-  border-image-repeat: round;
+  overflow: hidden;
+}
+
+.post-border {
+  width: 550px;
+  min-height: 180px;
+  background-color: #f8f7f4;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  border-radius: 10px;
 }
 
 .news-right p {
-  margin-top: 29px;
+  margin-top: 19px;
   margin-left: 21px;
   margin-bottom: 37px;
   max-width: 510px;
@@ -983,54 +1115,77 @@ a.navbar-link.link-active::before  {
   border: 1px solid #d3d3d2;
 }
 
+.subscribe-form input[type="email"]:required + label {
+  position: absolute;
+  color: #999999;
+  font-size: 16px;
+  line-height: 24px;
+  height: 30px;
+  width: 300px;
+  left: 30px;
+  top: 10px;
+  cursor: text;
+  pointer-events: none;
+}
+
 .subscribe-form input[type="email"]:hover {
   border: 2px solid #c7c6c5;
   width: 350px;
+  height: 38px;
+  padding-left: 13px;
 }
 
 .subscribe-form input[type="email"]:focus {
   width: 350px;
+  height: 38px;
+  padding-left: 13px;
   border: 2px solid #8fbdec;
   color: #323232;
   font-weight: bold;
   outline: none;
 }
 
-.subscribe-form label {
-  display: none;
+.subscribe-form input[type="email"]:focus + label {
   position: absolute;
-  color: #8fbdec;
-  width: inherit;
   height: 20px;
+  width: 300px;
   font-size: 11px;
   line-height: 13px;
-  top: -20px;
-  left: 40px;;
+  color: #5b9ddf;
+  top: -15px;
+  left: 35px;
 }
 
-input[type="email"]:focus + label {
-  display: block;
+.subscribe-form input[type="email"]:valid + label {
+  position: absolute;
+  height: 20px;
+  width: 300px;
+  font-size: 11px;
+  line-height: 13px;
+  color: #999999;
+  top: -15px;
+  left: 35px;
 }
 
-/*Скрытие плейсхолдера*/
-
-:focus::-webkit-input-placeholder {
-  color: transparent
-}
- 
-:focus::-moz-placeholder {
-  color: transparent
-}
- 
-:focus:-moz-placeholder {
-  color: transparent
-}
- 
-:focus:-ms-input-placeholder {
-  color: transparent
+.subscribe-form input[type="email"]:required:invalid + label {
+  position: absolute;
+  height: 20px;
+  width: 300px;
+  font-size: 11px;
+  line-height: 13px;
+  color: #5b9ddf;
+  top: -15px;
+  left: 35px;
 }
 
-/*=============*/
+.subscribe-form input[type="email"]:invalid {
+  font-weight: bold;
+}
+
+.subscribe-form input[type="email"]:valid {
+  color: #323232;
+  font-weight: bold;
+}
 
 .btn-subscribe {
   text-shadow: none;
@@ -1038,19 +1193,18 @@ input[type="email"]:focus + label {
   line-height: 24px;
   font-weight: bold;
   border: none;
-  padding-top: 9px;
-  padding-bottom: 9px;
-  padding-right: 16px;
-  padding-left: 16px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 15px;
+  padding-left: 15px;
   border-radius: 25px;
 }
 
 .address {
   position: relative;
   min-height: 430px;
-  min-width: 1200px;
-  margin-right: -27px;
-  margin-left: -27px;
+  width: 1200px;
+  margin: 0 auto;
   background-image: url("../img/map.jpg");
   background-repeat: no-repeat;
   background-position: 50% 51%;
@@ -1063,19 +1217,19 @@ input[type="email"]:focus + label {
   height: 141px;
   background-image: url("../img/pin.png");
   background-repeat: no-repeat;
-  top: 139px;
-  left: 266px;
+  top: 32%;
+  left: 22%;
 }
 
 .address-details {
+  position: absolute;
   width: 276px;
   padding-left: 26px;
   min-height: 305px;
-  float: right;
-  margin-top: 62px;
-  margin-right: 27px;
   background-color: #fefefe;
   border-radius: 15px;
+  top: 14.5%;
+  left: 72.5%;
 }
 
 .address-details p {
@@ -1313,27 +1467,81 @@ input[type="email"]:focus + label {
 }
 
 
-/*поп-апы*/
+/*Обратная связь*/
 .feedback {
   display: none;
+  position: absolute;
+  top: 338px;
+  left: 50%;
   width: 454px;
   min-height: 442px;
+  margin-left: -233px;
   padding-top: 18px;
   padding-left: 24px;
+  background-color: #f8f7f4;
+  border-radius: 10px;
+  z-index: 11;
+}
+
+.feedback-close {
+  width: 20px;
+  height: 20px;
+  font-size: 0;
+  border: 0;
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: #f8f7f4;
+  outline: none;
+}
+
+.feedback-close::before,
+.feedback-close::after {
+  content: "";
+  position: absolute;
+  left: 1px;
+  width: 20px;
+  height: 2px;
+  background-color: #000000;
+  border-radius: 1px;
+}
+
+.feedback-close::before {
+  transform: rotate(45deg);
+}
+
+.feedback-close::after {
+  transform: rotate(-45deg);
 }
 
 .feedback strong {
+  position: relative;
   font-size: 24px;
   line-height: 28px;
   font-weight: 500;
+}
+
+.feedback::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #ffffff;
+  bottom: 105px;
+  right: 24px;
 }
 
 .feedback-form input[type="text"],
 .feedback-form input[type="email"] {
   display: block;
   margin-bottom: 20px;
-  width: 267px;
+  padding: 0;
+  padding-left: 14px;
+  width: 254px;
   min-height: 44px;
+  border: 1px solid #d3d3d2;
+  border-radius: 5px;
 }
 
 .feedback-form input[type="text"] {
@@ -1341,9 +1549,14 @@ input[type="email"]:focus + label {
 }
 
 .feedback-form textarea {
-  width: 428px;
-  min-height: 155px;
+  
+  width: 414px;
+  min-height: 145px;
   margin-bottom: 25px;
+  padding-left: 14px;
+  padding-top: 10px;
+  border: 1px solid #d3d3d2;
+  border-radius: 5px;
 }
 
 .btn-feedback-send {
@@ -1353,6 +1566,28 @@ input[type="email"]:focus + label {
   min-height: 47px;
   border: 0;
   padding: 0;
+  border-radius: 25px;
+}
+
+.feedback-strong::before {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background-color: red;
+  bottom: 0;
+  right: 0;
+}
+
+.modal-overlay {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
 }
 
 
@@ -1444,6 +1679,7 @@ input[type="email"]:focus + label {
 }
 
 .filter-form fieldset {
+  display: inline-block;
   border: none;
   padding: 0;
   margin: 0;
@@ -1459,35 +1695,38 @@ input[type="email"]:focus + label {
 
 .filter-select-container {
   position: relative;
-  display: inline-block;
   width: 193px;
-  vertical-align: top;
+  margin-right: 0;
 }
 
 .filter-select-container select[name="select"] {
-  display: none;
-}
-
-.filter-select-container label {
   position: relative;
   display: inline-block;
-  vertical-align: top;
   width: 193px;
+  vertical-align: top;
   min-height: 36px;
   border-radius: 25px;
+  border: none;
   background-color: rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+  padding-left: 10px;
+  padding-top: 8px;
+  padding-bottom: 9px;
+  text-transform: lowercase;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+  outline: none;
+  z-index: 1;
 }
 
-.filter-select-container label:hover {
+.filter-select-container select[name="select"]:hover {
   color: #000000;
   background-color: #ffffff;
 } 
 
-.filter-select-container label:hover::before {
-  border-color: #000000 transparent transparent transparent;
-}
-
-.filter-select-container label::before {
+.filter-select-container::before {
+  visibility: hidden;
   position: absolute;
   content: "";
   width: 0;
@@ -1495,19 +1734,12 @@ input[type="email"]:focus + label {
   border-style: solid;
   border-width: 5px 4.5px 0 4.5px;
   border-color: #ffffff transparent transparent transparent;
-  top: 45%;
-  right: 7%;
+  top: 0;
+  left: 0;
 }
 
-label[for="filter-select"] span {
-  display: block;
-  padding-left: 15px;
-  padding-top: 8px;
-  padding-bottom: 9px;
-  text-transform: lowercase;
-  font-size: 16px;
-  line-height: 18px;
-  font-weight: 500;
+.filter-select-container:hover::before  {
+  border-color: #000000 transparent transparent transparent;
 }
 
 .filter-select-container legend {
@@ -1855,72 +2087,4 @@ input[type="radio"]:disabled + label::after {
   height: 1px;
   background-color: rgba(255, 255, 255, 0.3);
   border: none;
-}
-
-
-/*поп-ап корзины*/
-
-.cart-popup {
-  display: none;
-  width: 510px;
-  min-height: 242px;
-  padding-top: 19px;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-.item-container {
-  margin-bottom: 20px;
-  font-size: 0;
-}
-
-.item-container > * {
-  display: inline-block;
-  vertical-align: top;
-  margin-right: 30px;
-}
-
-.item-thumbnail {
-  margin-left: 27px;
-  width: 33px;
-  min-height: 33px;
-  margin-right: 13px;
-}
-
-.item-name {
-  width: 223px;
-  padding-top: 12px;
-  font-size: 13px;
-  line-height: 16px;
-}
-
-.item-quantity {
-  padding-top: 12px;
-  font-size: 13px;
-  line-height: 16px;
-}
-
-.item-value {
-  padding-top: 12px;
-  font-size: 13px;
-  line-height: 16px;
-  margin-right: 0;
-}
-
-.item-total {
-  width: 170px;
-  float: right;
-  text-align: right;
-  margin-top: 16px;
-}
-
-.cart-popup strong {
-  display: block;
-  margin-bottom: 16px;
-}
-
-.btn-order {
-  display: block;
-  text-align: center;
-  min-height: 46px;
 }
