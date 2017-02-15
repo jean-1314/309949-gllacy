@@ -1292,6 +1292,7 @@ a.navbar-link.link-active::before  {
   width: 350px;
   height: 38px;
   padding-left: 13px;
+  margin-right: 12px;
 }
 
 .subscribe-form input[type="text"]:focus {
@@ -1302,6 +1303,7 @@ a.navbar-link.link-active::before  {
   color: #323232;
   font-weight: bold;
   outline: none;
+  margin-right: 12px;
 }
 
 .subscribe-form input[type="text"]:focus + label {
@@ -1613,7 +1615,7 @@ a.navbar-link.link-active::before  {
 
 /*Обратная связь*/
 .feedback {
-  /*display: none;*/
+  display: none;
   position: absolute;
   top: 338px;
   left: 50%;
