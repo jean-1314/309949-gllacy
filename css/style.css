@@ -315,24 +315,83 @@ a.navbar-link.link-active::before  {
   line-height: 24px;
   color: #999999;
   box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.4);
-  z-index: 5;
-  top: 50px;
+  z-index: 6;
+  top: 42px;
   left: -300px;
 }
 
 .search-form {
-  width: 296px;
+  width: 311px;
   min-height: 44px;
   margin: 0 auto;
+  position: relative;
 }
 
-.search-form input {
+.search-form input[type="search"] {
+  width: 296px;
+  margin: 0 auto;
   border: 1px solid #d3d3d2;
   border-radius: 5px;
   display: block;
-  width: inherit;
   min-height: inherit;
   padding-left: 14px;
+}
+
+.search-form input[type="search"]:required  + label {
+  position: absolute;
+  color: #999999;
+  font-size: 14px;
+  line-height: 24px;
+  height: 30px;
+  width: 200px;
+  left: -114px;
+  top: 10px;
+  cursor: text;
+  pointer-events: none;
+}
+
+.search-form input[type="search"]:hover {
+  border: 2px solid #c7c6c5;
+  width: 296px;
+  height: 38px;
+  padding-left: 13px;
+}
+
+.search-form input[type="search"]:focus {
+  width: 296px;
+  height: 38px;
+  padding-left: 13px;
+  border: 2px solid #8fbdec;
+  color: #323232;
+  font-weight: bold;
+  outline: none;
+}
+
+.search-form input[type="search"]:focus + label {
+  position: absolute;
+  height: 20px;
+  width: 200px;
+  font-size: 11px;
+  line-height: 13px;
+  color: #5b9ddf;
+  top: -15px;
+  left: -130px;
+}
+
+.search-form input[type="search"]:valid + label {
+  position: absolute;
+  height: 20px;
+  width: 200px;
+  font-size: 11px;
+  line-height: 13px;
+  color: #999999;
+  top: -15px;
+  left: -130px;
+}
+
+.search-form input[type="search"]:valid {
+  color: #323232;
+  font-weight: bold;
 }
 
 .navbar-login,
@@ -406,9 +465,10 @@ a.navbar-link.link-active::before  {
 
 .login-form {
   min-height: inherit;
+  position: relative;
 }
 
-.login-form input[type="email"],
+.login-form input[type="text"],
 .login-form input[type="password"] {
   width: 222px;
   min-height: 44px;
@@ -419,6 +479,105 @@ a.navbar-link.link-active::before  {
   border-radius: 5px;
   padding: 0;
   padding-left: 14px;
+}
+
+.login-form input[type="text"]:required + label {
+  position: absolute;
+  color: #999999;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  height: 30px;
+  width: 180px;
+  left: -15px;
+  top: 30px;
+  cursor: text;
+  pointer-events: none;
+}
+
+.login-form input[type="password"]:required + label {
+  position: absolute;
+  color: #999999;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  height: 30px;
+  width: 180px;
+  left: -95px;
+  top: 95px;
+  cursor: text;
+  pointer-events: none;
+}
+
+.login-form input[type="text"]:hover,
+.login-form input[type="password"]:hover {
+  border: 2px solid #c7c6c5;
+  min-height: 38px;
+  margin-bottom: 4px;
+}
+
+.login-form input[type="text"]:focus,
+.login-form input[type="password"]:focus {
+  border: 2px solid #8fbdec;
+  color: #323232;
+  font-weight: bold;
+  outline: none;
+  min-height: 38px;
+  margin-bottom: 4px;
+}
+
+.login-form input[type="text"]:focus + label {
+  position: absolute;
+  height: 20px;
+  width: 200px;
+  font-size: 11px;
+  line-height: 13px;
+  color: #5b9ddf;
+  top: 5px;
+  left: -70px;
+}
+
+.login-form input[type="password"]:focus + label {
+  position: absolute;
+  height: 20px;
+  width: 200px;
+  font-size: 11px;
+  line-height: 13px;
+  color: #5b9ddf;
+  top: 70px;
+  left: -130px;
+}
+
+.login-form input[type="text"]:valid + label {
+  position: absolute;
+  height: 20px;
+  width: 200px;
+  font-size: 11px;
+  line-height: 13px;
+  color: #999999;
+  top: 5px;
+  left: -70px;
+}
+
+.login-form input[type="text"]:valid {
+  color: #323232;
+  font-weight: bold;
+}
+
+.login-form input[type="password"]:valid + label {
+  position: absolute;
+  height: 20px;
+  width: 200px;
+  font-size: 11px;
+  line-height: 13px;
+  color: #999999;
+  top: 70px;
+  left: -130px;
+}
+
+.login-form input[type="password"]:valid {
+  color: #323232;
+  font-weight: bold;
 }
 
 .btn-login {
@@ -1105,7 +1264,7 @@ a.navbar-link.link-active::before  {
   position: relative;
 }
 
-.subscribe-form input[type="email"] {
+.subscribe-form input[type="text"] {
   width: 352px;
   height: 40px;
   margin-left: 21px;
@@ -1115,7 +1274,7 @@ a.navbar-link.link-active::before  {
   border: 1px solid #d3d3d2;
 }
 
-.subscribe-form input[type="email"]:required + label {
+.subscribe-form input[type="text"]:required + label {
   position: absolute;
   color: #999999;
   font-size: 16px;
@@ -1128,14 +1287,14 @@ a.navbar-link.link-active::before  {
   pointer-events: none;
 }
 
-.subscribe-form input[type="email"]:hover {
+.subscribe-form input[type="text"]:hover {
   border: 2px solid #c7c6c5;
   width: 350px;
   height: 38px;
   padding-left: 13px;
 }
 
-.subscribe-form input[type="email"]:focus {
+.subscribe-form input[type="text"]:focus {
   width: 350px;
   height: 38px;
   padding-left: 13px;
@@ -1145,7 +1304,7 @@ a.navbar-link.link-active::before  {
   outline: none;
 }
 
-.subscribe-form input[type="email"]:focus + label {
+.subscribe-form input[type="text"]:focus + label {
   position: absolute;
   height: 20px;
   width: 300px;
@@ -1156,7 +1315,7 @@ a.navbar-link.link-active::before  {
   left: 35px;
 }
 
-.subscribe-form input[type="email"]:valid + label {
+.subscribe-form input[type="text"]:valid + label {
   position: absolute;
   height: 20px;
   width: 300px;
@@ -1167,22 +1326,7 @@ a.navbar-link.link-active::before  {
   left: 35px;
 }
 
-.subscribe-form input[type="email"]:required:invalid + label {
-  position: absolute;
-  height: 20px;
-  width: 300px;
-  font-size: 11px;
-  line-height: 13px;
-  color: #5b9ddf;
-  top: -15px;
-  left: 35px;
-}
-
-.subscribe-form input[type="email"]:invalid {
-  font-weight: bold;
-}
-
-.subscribe-form input[type="email"]:valid {
+.subscribe-form input[type="text"]:valid {
   color: #323232;
   font-weight: bold;
 }
@@ -1469,7 +1613,7 @@ a.navbar-link.link-active::before  {
 
 /*Обратная связь*/
 .feedback {
-  display: none;
+  /*display: none;*/
   position: absolute;
   top: 338px;
   left: 50%;
@@ -1532,31 +1676,178 @@ a.navbar-link.link-active::before  {
   right: 24px;
 }
 
-.feedback-form input[type="text"],
-.feedback-form input[type="email"] {
+.feedback-form {
+  position: relative;
+}
+
+.feedback-form input[type="text"] {
   display: block;
   margin-bottom: 20px;
   padding: 0;
   padding-left: 14px;
   width: 254px;
-  min-height: 44px;
+  height: 44px;
   border: 1px solid #d3d3d2;
   border-radius: 5px;
 }
 
-.feedback-form input[type="text"] {
+.feedback-form input[type="text"]:first-child {
   margin-top: 20px;
 }
 
+.feedback-form input[type="text"]:first-child:required + label {
+  position: absolute;
+  color: #999999;
+  font-size: 16px;
+  line-height: 24px;
+  height: 30px;
+  left: 14px;;
+  top: 10px;
+  cursor: text;
+  pointer-events: none;
+}
+
+.feedback-form input[type="text"]:nth-of-type(2):required + label {
+  position: absolute;
+  color: #999999;
+  font-size: 16px;
+  line-height: 24px;
+  height: 30px;
+  left: 14px;
+  top: 77px;
+  cursor: text;
+  pointer-events: none;
+}
+
+.feedback-form input[type="text"]:hover {
+  border: 2px solid #c7c6c5;
+  width: 252px;
+  height: 42px;
+  padding-left: 13px;
+}
+
+.feedback-form input[type="text"]:focus {
+  border: 2px solid #8fbdec;
+  width: 252px;
+  height: 42px;
+  padding-left: 13px;
+  color: #323232;
+  font-weight: bold;
+  outline: none;
+}
+
+.feedback-form input[type="text"]:valid {
+  color: #323232;
+  font-weight: bold;
+}
+
+.feedback-form input[type="text"]:first-child:focus + label {
+  position: absolute;
+  height: 20px;
+  width: 300px;
+  font-size: 11px;
+  line-height: 13px;
+  color: #5b9ddf;
+  top: -14px;
+  left: 14px;
+}
+
+
+.feedback-form input[type="text"]:first-child:valid + label {
+  position: absolute;
+  height: 20px;
+  width: 300px;
+  font-size: 11px;
+  line-height: 13px;
+  color: #999999;
+  top: -14px;
+  left: 14px;
+}
+
+.feedback-form input[type="text"]:nth-of-type(2):focus + label {
+  position: absolute;
+  height: 20px;
+  width: 300px;
+  font-size: 11px;
+  line-height: 13px;
+  color: #5b9ddf;
+  top: 50px;
+  left: 14px;
+}
+
+
+.feedback-form input[type="text"]:nth-of-type(2):valid + label {
+  position: absolute;
+  height: 20px;
+  width: 300px;
+  font-size: 11px;
+  line-height: 13px;
+  color: #999999;
+  top: 50px;
+  left: 14px;
+}
+
 .feedback-form textarea {
-  
   width: 414px;
-  min-height: 145px;
+  height: 145px;
   margin-bottom: 25px;
   padding-left: 14px;
   padding-top: 10px;
   border: 1px solid #d3d3d2;
   border-radius: 5px;
+}
+
+.feedback-form textarea:required + label {
+  position: absolute;
+  color: #999999;
+  font-size: 16px;
+  line-height: 24px;
+  height: 30px;
+  left: 14px;
+  top: 145px;
+  cursor: text;
+  pointer-events: none;
+}
+
+.feedback-form textarea:hover {
+  border: 2px solid #c7c6c5;
+  width: 410px;
+  height: 143px;
+  padding-left: 13px;
+}
+
+.feedback-form textarea:focus {
+  border: 2px solid #5b9ddf;
+  width: 410px;
+  height: 143px;
+  padding-left: 13px;
+  font-weight: bold;
+  outline: none;
+}
+
+.feedback-form textarea:valid {
+  color: #323232;
+  font-weight: bold;
+}
+
+.feedback-form textarea:focus + label {
+  position: absolute;
+  height: 20px;
+  font-size: 11px;
+  line-height: 13px;
+  color: #5b9ddf;
+  top: 115px;
+  left: 14px;
+}
+
+.feedback-form textarea:valid + label {
+  position: absolute;
+  height: 20px;
+  font-size: 11px;
+  line-height: 13px;
+  color: #999999;
+  top: 115px;
+  left: 14px;
 }
 
 .btn-feedback-send {
@@ -1569,14 +1860,15 @@ a.navbar-link.link-active::before  {
   border-radius: 25px;
 }
 
-.feedback-strong::before {
+.feedback strong::before {
   content: "";
   position: absolute;
-  width: 5px;
-  height: 5px;
-  background-color: red;
-  bottom: 0;
-  right: 0;
+  width: 10px;
+  height: 10px;
+  background-color: #ffffff;
+  top: 329px;
+  right: -80px;
+  z-index: 7;
 }
 
 .modal-overlay {

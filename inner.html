@@ -62,7 +62,8 @@
               <a href="#"></a>
               <div class="search-popup">
                 <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
-                  <input type="search" name="search" value="">
+                  <input id="search-form-input" type="search" name="search" value="" required>
+                  <label for="search-form-input">Что ищем?</label>
                 </form>
               </div>
             </div>
@@ -71,8 +72,10 @@
               <a class="login-button" href="#">Вход</a>
               <div class="login-block">
                 <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
-                  <input type="email" name="email" value="">
-                  <input type="password" name="password" value="">
+                  <input id="login-form-email" type="text" name="email" value="" required>
+                  <label for="login-form-email">Электронная почта</label>
+                  <input id="login-form-password" type="password" name="password" value="" required>
+                  <label for="login-form-password">Пароль</label>
                   <input class="btn btn-login" type="submit" name="login" value="Войти">
                   <div class="login-text">
                     <a href="#">Забыли пароль?</a>

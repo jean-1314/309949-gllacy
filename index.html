@@ -67,7 +67,8 @@
               <a href="#"></a>
               <div class="search-popup">
                 <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
-                  <input type="search" name="search" value="">
+                  <input id="search-form-input" type="search" name="search" value="" required>
+                  <label for="search-form-input">Что ищем?</label>
                 </form>
               </div>
             </div>
@@ -76,8 +77,10 @@
               <a class="login-button" href="#">Вход</a>
               <div class="login-block">
                 <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
-                  <input type="email" name="email" value="">
-                  <input type="password" name="password" value="">
+                  <input id="login-form-email" type="text" name="email" value="" required>
+                  <label for="login-form-email">Электронная почта</label>
+                  <input id="login-form-password" type="password" name="password" value="" required>
+                  <label for="login-form-password">Пароль</label>
                   <input class="btn btn-login" type="submit" name="login" value="Войти">
                   <div class="login-text">
                     <a href="#">Забыли пароль?</a>
@@ -206,7 +209,7 @@
                 Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
               </p>
               <form class="subscribe-form" action="https://echo.htmlacademy.ru" method="post">
-                <input id="email" type="email" name="email" value="" required>
+                <input id="email" type="text" name="email" value="" required>
                 <label for="email">Электронная почта</label>
                 <input class="btn btn-subscribe" type="submit" name="submit" value="Отправить">
               </form>
@@ -263,9 +266,12 @@
     <section class="feedback">
       <strong>Мы обязательно вам ответим!</strong>
       <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
-        <input type="text" name="name" value="">
-        <input type="email" name="email" value="">
-        <textarea rows="6" cols="50"></textarea>
+        <input id="feedback-input-name" type="text" name="name" value="" required>
+        <label for="feedback-input-name">Как вас зовут?</label>
+        <input id="feedback-input-email" type="text" name="email" value="" required>
+        <label for="feedback-input-email">Ваша почта для ответа?</label>
+        <textarea id="feedback-input-text" rows="6" cols="50" required></textarea>
+        <label for="feedback-input-text">Напишите что-нибудь...</label>
         <input class="btn btn-feedback-send" type="submit" name="submit" value="Отправить">
       </form>
       <button class="feedback-close" type="button" title="Закрыть">Закрыть</button>
