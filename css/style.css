@@ -168,10 +168,14 @@ a.navbar-link.link-active::before  {
   position: relative;
 }
 
-.navbar-dropdown {
+.dropdown-container {
   visibility: hidden;
   position: absolute;
+  padding-top: 5px;
   z-index: 2;
+}
+
+.navbar-dropdown {
   font-size: 14px;
   line-height: 16px;
   padding: 0;
@@ -290,7 +294,7 @@ a.navbar-link.link-active::before  {
   height: 17px;
   background-position: -636px -10px;
   top: 20%;
-  left: 18%;
+  left: 19%;
 }
 
 .navbar-search a:hover::before {
@@ -300,7 +304,7 @@ a.navbar-link.link-active::before  {
   height: 17px;
   background-position: -374px -10px;
   top: 20%;
-  left: 18%;
+  left: 19%;
 }
 
 .search-popup {
@@ -316,7 +320,7 @@ a.navbar-link.link-active::before  {
   color: #999999;
   box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.4);
   z-index: 6;
-  top: 42px;
+  top: 40px;
   left: -300px;
 }
 
@@ -458,7 +462,7 @@ a.navbar-link.link-active::before  {
   background-color: #f8f7f4;
   box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.4);
   border-radius: 5px;
-  top: 130%;
+  top: 40px;
   right: -5%;
   z-index: 5;
 }
@@ -687,7 +691,7 @@ a.navbar-link.link-active::before  {
   background-color: #f8f7f4;
   border-radius: 5px;
   box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.4);
-  top: 50px;
+  top: 40px;
   left: -400px;
   z-index: 10;
 }
