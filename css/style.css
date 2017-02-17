@@ -17,6 +17,11 @@ body > input[type="radio"] {
   display: none;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .site-wrapper {
   min-width: 1200px;
   background-color: #849d8f;
@@ -73,6 +78,7 @@ body > input[type="radio"] {
   text-align: center;
   text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
   box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
+  overflow: hidden;
 }
 
 .btn:hover {
@@ -92,7 +98,7 @@ body > input[type="radio"] {
 
 .navbar-main {
   float: left;
-  min-width: 560px;
+  max-width: 700px;
 }
 
 .navbar-main-list {
@@ -103,6 +109,7 @@ body > input[type="radio"] {
   padding: 0;
   list-style: none;
   font-size: 0;
+  
 }
 
 .navbar-main-list li {
@@ -113,6 +120,7 @@ body > input[type="radio"] {
 .navbar-link {
   position: relative;
   display: block;
+  max-width: 170px;
   height: 22px;
   margin-right: 8px;
   margin-top: -3px;
@@ -126,6 +134,7 @@ body > input[type="radio"] {
   font-weight: bold;
   border-radius: 25px;
   text-align: center;
+  overflow: hidden;
 }
 
 .navbar-link::before {
@@ -221,6 +230,18 @@ a.navbar-link.link-active::before  {
   background-color: #fbded8;
 }
 
+.dropdown-item:first-child:hover {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background-color: #fbded8;
+}
+
+.dropdown-item:last-child:hover {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: #fbded8;
+}
+
 .dropdown-item:active {
   background-color: #f6b5a5;
 }
@@ -234,8 +255,13 @@ a.navbar-link.link-active::before  {
   cursor: initial;
 }
 
-.dropdown-trigger:hover .navbar-dropdown {
+.dropdown-trigger:hover .dropdown-container {
   visibility: visible;
+}
+
+.navbar-link-hover {
+  background-color: #ffffff;
+  color: #000000;
 }
 
 .logo {
@@ -250,8 +276,9 @@ a.navbar-link.link-active::before  {
 }
 
 .navbar-right {
+  position: relative;
   float: right;
-  width: 267px;
+  max-width: 267px;
   text-align: right;
   margin-top: 23px;
   font-size: 0;
@@ -281,7 +308,15 @@ a.navbar-link.link-active::before  {
   background-color: #ffffff;
 }
 
-.navbar-search a:hover + .search-popup {
+.search-container {
+  position: absolute;
+  padding-top: 10px;
+  z-index: 6;
+  top: 30px;
+  left: -300px;
+}
+
+.navbar-search:hover .search-popup {
   display: block;
 }
 
@@ -308,8 +343,7 @@ a.navbar-link.link-active::before  {
 }
 
 .search-popup {
-  position: absolute;
-  display: none;
+  display: none; 
   width: 342px;
   min-height: 64px;
   padding-top: 20px;
@@ -319,9 +353,6 @@ a.navbar-link.link-active::before  {
   line-height: 24px;
   color: #999999;
   box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.4);
-  z-index: 6;
-  top: 40px;
-  left: -300px;
 }
 
 .search-form {
@@ -410,14 +441,23 @@ a.navbar-link.link-active::before  {
   position: relative;
 }
 
-.login-button:hover + .login-block {
+.navbar-login:hover .login-block {
   display: block;
+}
+
+.login-container {
+  position: absolute;
+  padding-top: 10px;
+  top: 30px;
+  right: -5%;
+  z-index: 5;
 }
 
 .login-button {
   position: relative;
   display: block;
   width: 77px;
+  max-width: 92px;
   height: 24px;
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 25px;
@@ -425,6 +465,7 @@ a.navbar-link.link-active::before  {
   text-decoration: none;
   padding-top: 8px;
   padding-right: 15px;
+  overflow: hidden;
 }
 
 .login-button:hover {
@@ -454,17 +495,13 @@ a.navbar-link.link-active::before  {
   left: 18%;
 }
 
-.login-block {
-  position: absolute;
+.login-block {  
   display: none;
   width: 277px;
   min-height: 214px;
   background-color: #f8f7f4;
   box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.4);
-  border-radius: 5px;
-  top: 40px;
-  right: -5%;
-  z-index: 5;
+  border-radius: 5px;  
 }
 
 .login-form {
@@ -625,6 +662,7 @@ a.navbar-link.link-active::before  {
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 25px;
   text-align: center;
+  overflow: hidden;
 }
 
 .cart-full {
@@ -680,8 +718,15 @@ a.navbar-link.link-active::before  {
 
 /*поп-ап корзины*/
 
-.cart-popup {
+.cart-container {
   position: absolute;
+  padding-top: 10px;
+  top: 30px;
+  left: -400px;
+  z-index: 10;
+}
+
+.cart-popup {
   display: none;
   width: 510px;
   min-height: 242px;
@@ -691,9 +736,6 @@ a.navbar-link.link-active::before  {
   background-color: #f8f7f4;
   border-radius: 5px;
   box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.4);
-  top: 40px;
-  left: -400px;
-  z-index: 10;
 }
 
 .item-container {
@@ -800,14 +842,16 @@ a.navbar-link.link-active::before  {
 
 .details-inner {
   position: absolute;
-  top: 100%;
-  right: 0;
+  top: 32px;
+  left: 85px;
 }
 
 .details {
-  min-width: 165px;
+  min-width: 175px;
+  max-height: 100px;
   margin-top: 18px;
   color: #ffffff;
+  overflow: hidden;
 }
 
 .details-schedule {
@@ -838,19 +882,24 @@ a.navbar-link.link-active::before  {
 
 .slide-title {
   width: 700px;
+  max-height: 150px;
   margin: 0 auto;
   margin-bottom: 30px;
   font-size: 60px;
   font-weight: bold;
   line-height: 60px;
+  overflow: hidden;
 }
 
 .btn-slider {
   margin: 0 auto;
+  max-width: 300px;
+  max-height: 63px;
   padding: 10px 40px;
   font-size: 32px;
   line-height: 44px;
   border-radius: 100px;
+  overflow: hidden;
 }
 
 .slider-switcher {
@@ -914,13 +963,14 @@ a.navbar-link.link-active::before  {
 .specials-left,
 .specials-right {
   width: 560px;
-  min-height: 229px;
+  height: 229px;
   display: inline-block;
   vertical-align: top;
   font-size: 18px;
   line-height: 22px;
   margin-bottom: 40px;
   border-radius: 15px;
+  overflow: hidden;
 }
 
 .specials-left {
@@ -938,30 +988,38 @@ a.navbar-link.link-active::before  {
 
 .specials-left h2,
 .specials-right h2 {
+  display: block;
+  max-height: 60px;
   margin-top: 16px;
   margin-bottom: 15px;
   margin-left: 18px;
   font-size: 35px;
   line-height: 41px;
+  overflow: hidden;
 }
 
 .specials-left p,
 .specials-right p {
+  max-height: 45px;
   margin-top: 0;
-  margin-bottom: 44px;
   margin-left: 19px;
   margin-right: auto;
   width: 515px;
+  overflow: hidden;
 }
 
 .btn-specials {
   float: right;
+  max-width: 170px;
+  max-height: 50px;
+  margin-top: 27px;
   margin-right: 21px;
   font-size: 18px;
   line-height: 24px;
   padding: 10px 22px 12px 22px;
   border-radius: 25px;
   text-shadow: none;
+  overflow: hidden;
 }
 
 .topsellers {
@@ -1039,12 +1097,14 @@ a.navbar-link.link-active::before  {
 
 .item-link {
   display: block;
+  max-height: 50px;
   margin-bottom: 10px;
   color: rgba(255, 255, 255, 0.3);
   text-decoration: underline;
   font-size: 16px;
   font-weight: 500;
   text-align: center;
+  overflow: hidden;
 }
 
 .item-link span {
@@ -1093,7 +1153,7 @@ a.navbar-link.link-active::before  {
   display: block;
 }
 
-.topsellers-item:last-child,
+.topsellers-item:nth-child(4n),
 .catalog-item:nth-child(4n) {
   margin-right: 0;
 }
@@ -1502,9 +1562,11 @@ a.navbar-link.link-active::before  {
 
 .info-link {
   display: block;
+  max-height: 20px;
   text-decoration: underline;
   color: rgba(255, 255, 255, 0.3);
   margin-bottom: 4px;
+  overflow: hidden;
 }
 
 .info-link span {
@@ -1554,12 +1616,14 @@ a.navbar-link.link-active::before  {
 
 .footer-copyright {
   width: 267px;
+  max-height: 80px;
   display: inline-block;
   vertical-align: top;
   text-align: right;
   margin-top: 19px;
   font-size: 13px;
   line-height: 18px;
+  overflow: hidden;
 }
 
 .footer-copyright img {
@@ -1611,7 +1675,7 @@ a.navbar-link.link-active::before  {
 
 .feedback {
   display: none;
-  position: absolute;
+  position: fixed;
   top: 338px;
   left: 50%;
   width: 454px;
@@ -1626,6 +1690,7 @@ a.navbar-link.link-active::before  {
 
 .feedback-show {
   display: block;
+  animation: appear 0.4s;
 }
 
 .feedback-close {
@@ -1885,6 +1950,15 @@ a.navbar-link.link-active::before  {
   background: rgba(0, 0, 0, 0.5);
 }
 
+@keyframes appear {
+    0% {
+      transform: scale(0, 0);
+    }
+    100% {
+      transform: scale(1, 1);
+    }    
+}
+
 .modal-overlay-show {
   display: block;
 }
@@ -2023,23 +2097,6 @@ a.navbar-link.link-active::before  {
   color: #000000;
   background-color: #ffffff;
 } 
-
-.filter-select-container::before {
-  visibility: hidden;
-  position: absolute;
-  content: "";
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 5px 4.5px 0 4.5px;
-  border-color: #ffffff transparent transparent transparent;
-  top: 0;
-  left: 0;
-}
-
-.filter-select-container:hover::before  {
-  border-color: #000000 transparent transparent transparent;
-}
 
 .filter-select-container legend {
   padding-left: 16px;
@@ -2268,6 +2325,7 @@ input[type="radio"]:disabled + label::after {
   font-size: 16px;
   line-height: 18px;
   font-weight: 500;
+  outline: none;
 }
 
 .btn-filter:hover {

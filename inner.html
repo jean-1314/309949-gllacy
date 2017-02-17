@@ -62,79 +62,85 @@
 
             <div class="navbar-search">
               <a href="#"></a>
-              <div class="search-popup">
-                <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
-                  <input id="search-form-input" type="search" name="search" value="" required>
-                  <label for="search-form-input">Что ищем?</label>
-                </form>
+              <div class="search-container">
+                <div class="search-popup">
+                  <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
+                    <input id="search-form-input" type="search" name="search" value="" required>
+                    <label for="search-form-input">Что ищем?</label>
+                  </form>
+                </div>
               </div>
             </div>
 
             <div class="navbar-login">
               <a class="login-button" href="#">Вход</a>
-              <div class="login-block">
-                <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
-                  <input id="login-form-email" type="text" name="email" value="" required>
-                  <label for="login-form-email">Электронная почта</label>
-                  <input id="login-form-password" type="password" name="password" value="" required>
-                  <label for="login-form-password">Пароль</label>
-                  <input class="btn btn-login" type="submit" name="login" value="Войти">
-                  <div class="login-text">
-                    <a href="#">Забыли пароль?</a>
-                    <br>
-                    <a href="#">Новая регистрация</a>
-                  </div>
-                </form>
+              <div class="login-container">
+                <div class="login-block">
+                  <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+                    <input id="login-form-email" type="text" name="email" value="" required>
+                    <label for="login-form-email">Электронная почта</label>
+                    <input id="login-form-password" type="password" name="password" value="" required>
+                    <label for="login-form-password">Пароль</label>
+                    <input class="btn btn-login" type="submit" name="login" value="Войти">
+                    <div class="login-text">
+                      <a href="#">Забыли пароль?</a>
+                      <br>
+                      <a href="#">Новая регистрация</a>
+                    </div>
+                  </form>
+                </div>
               </div>
             </div>
 
             <div class="navbar-cart cart-full">
               <a class="cart-full-link" href="#">2 товара</a>
               <!--- Поп-ап корзины-->
-              <section class="cart-popup">
-                
-                <div class="item-container">
-                  <div class="item-thumbnail">
-                    <img src="img/ice-1.jpg" alt="ice-cream thumbnail" width="33" height="33">
+              <div class="cart-container">
+                <section class="cart-popup">
+                  
+                  <div class="item-container">
+                    <div class="item-thumbnail">
+                      <img src="img/ice-1.jpg" alt="ice-cream thumbnail" width="33" height="33">
+                    </div>
+                    <div class="item-name">
+                      <span>Пломбир с апельсиновым джемом</span>
+                    </div>
+                    <div class="item-quantity">
+                      <span>1,5 кг х</span>
+                      <i class="item-price">200 руб.</i>
+                    </div>
+                    <div class="item-value">
+                      <span>300 руб.</span>
+                    </div>
                   </div>
-                  <div class="item-name">
-                    <span>Пломбир с апельсиновым джемом</span>
-                  </div>
-                  <div class="item-quantity">
-                    <span>1,5 кг х</span>
-                    <i class="item-price">200 руб.</i>
-                  </div>
-                  <div class="item-value">
-                    <span>300 руб.</span>
-                  </div>
-                </div>
 
-                <div class="item-container">
-                  <div class="item-thumbnail">
-                    <img src="img/ice-3.jpg" alt="ice-cream thumbnail" width="33" height="33">
+                  <div class="item-container">
+                    <div class="item-thumbnail">
+                      <img src="img/ice-3.jpg" alt="ice-cream thumbnail" width="33" height="33">
+                    </div>
+                    <div class="item-name">
+                      <span>Клубничный пломбир с присыпкой из белого шоколада</span>
+                    </div>
+                    <div class="item-quantity">
+                      <span>1,5 кг х</span>
+                      <i class="item-price">300 руб.</i>
+                    </div>
+                    <div class="item-value">
+                      <span>450 руб.</span>
+                    </div>
                   </div>
-                  <div class="item-name">
-                    <span>Клубничный пломбир с присыпкой из белого шоколада</span>
-                  </div>
-                  <div class="item-quantity">
-                    <span>1,5 кг х</span>
-                    <i class="item-price">300 руб.</i>
-                  </div>
-                  <div class="item-value">
-                    <span>450 руб.</span>
-                  </div>
-                </div>
 
-                <hr>
+                  <hr>
 
-                <div class="item-total">
-                  <strong>Итого: 750 руб.</strong>
-                  <a class="btn btn-order" href="">Оформить заказ</a>
-                </div>
-              </section>
+                  <div class="item-total">
+                    <strong>Итого: 750 руб.</strong>
+                    <a class="btn btn-order" href="">Оформить заказ</a>
+                  </div>
+                </section>
+              </div>
             </div>
 
-            <div class="details ">
+            <div class="details details-inner">
               <span class="details-schedule">С 10 до 20, ежедневно</span>
               <span class="details-phone">8 812 450-25-25</span>
             </div>
