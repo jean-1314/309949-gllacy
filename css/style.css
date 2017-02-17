@@ -182,6 +182,7 @@ a.navbar-link.link-active::before  {
   position: absolute;
   padding-top: 5px;
   z-index: 2;
+  overflow: hidden;
 }
 
 .navbar-dropdown {
@@ -662,7 +663,6 @@ a.navbar-link.link-active::before  {
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 25px;
   text-align: center;
-  overflow: hidden;
 }
 
 .cart-full {
@@ -673,10 +673,12 @@ a.navbar-link.link-active::before  {
 .cart-empty-link{
   position: relative;
   display: block;
+  max-height: 20px;
   color: #ffffff;
   text-decoration: none;
   padding-top: 8px;
   padding-left: 13px;
+  overflow: hidden;
 }
 
 .cart-empty-link::before {
@@ -694,10 +696,12 @@ a.navbar-link.link-active::before  {
 .cart-full-link {
   position: relative;
   display: block;
+  max-height: 20px;
   color: #000000;
   padding-left: 25px;
   text-decoration: none;
   padding-top: 8px;
+  overflow: hidden;
 }
 
 .cart-full-link::before {
@@ -828,11 +832,14 @@ a.navbar-link.link-active::before  {
 .btn-order {
   display: block;
   text-align: center;
+  max-width: 170px;
+  max-height: 40px;
   padding: 10px 15px;
   border-radius: 25px;
   font-size: 18px;
   line-height: 24px;
   font-weight: bold;
+  overflow: hidden;
 }
 
 .navbar-right-inner {
@@ -1132,6 +1139,8 @@ a.navbar-link.link-active::before  {
 }
 
 .btn-item {
+  max-width: 205px;
+  max-height: 25px;
   position: absolute;
   display: none;
   width: 167px;
@@ -1139,6 +1148,7 @@ a.navbar-link.link-active::before  {
   border-radius: 25px;
   margin: 0 auto;
   left: 18%;
+  overflow: hidden;
 }
 
 .catalog-item .btn-item {
@@ -1398,6 +1408,8 @@ a.navbar-link.link-active::before  {
 }
 
 .btn-subscribe {
+  max-width: 130px;
+  max-height: 45px;
   text-shadow: none;
   font-size: 18px;
   line-height: 24px;
@@ -1408,6 +1420,7 @@ a.navbar-link.link-active::before  {
   padding-right: 15px;
   padding-left: 15px;
   border-radius: 25px;
+  overflow: hidden;
 }
 
 .address {
@@ -1466,6 +1479,8 @@ a.navbar-link.link-active::before  {
 }
 
 .btn-feedback {
+  max-width: 252px;
+  max-height: 44px;
   display: block;
   width: 250px;
   margin-top: 25px;
@@ -1478,6 +1493,7 @@ a.navbar-link.link-active::before  {
   padding-bottom: 11px;
   border-radius: 25px;
   text-shadow: none;
+  overflow: hidden;
 }
 
 .main-footer {
@@ -1967,11 +1983,14 @@ a.navbar-link.link-active::before  {
 /*inner.html*/
 
 .breadcrumbs {
+  max-width: 850px;
+  max-height: 20px;
   list-style: none;
   padding-left: 0;
   padding-right: 0;
   padding-top: 22px;
   font-size: 0;
+  overflow: hidden;
 }
 
 .breadcrumbs-item {
@@ -2033,12 +2052,15 @@ a.navbar-link.link-active::before  {
 }
 
 .page-title h1 {
+  max-width: 560px;
+  max-height: 45px;
   font-size: 35px;
   line-height: 41px;
   font-weight: bold;
   margin: 0;
   margin-top: 5px;
   color: #ffffff;
+  overflow: hidden;
 }
 
 .filters {
@@ -2049,6 +2071,9 @@ a.navbar-link.link-active::before  {
 
 .filter-form legend {
   padding: 0;
+  max-width: 200px;
+  max-height: 18px;
+  overflow: hidden;
 }
 
 .filter-form fieldset {
