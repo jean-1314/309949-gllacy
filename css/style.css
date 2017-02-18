@@ -13,7 +13,7 @@ body {
   font-family: "Roboto", "Tahoma", sans-serif;
 }
 
-body > input[type="radio"] {
+.body-index input[type="radio"] {
   display: none;
 }
 
@@ -114,7 +114,6 @@ img {
   padding: 0;
   list-style: none;
   font-size: 0;
-  
 }
 
 .navbar-main-list li {
