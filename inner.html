@@ -6,7 +6,7 @@
   <title>HTML Academy: Глейси</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
   <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
 </head>
 
 <body class="inner">
@@ -61,7 +61,7 @@
           <div class="navbar-right ">
 
             <div class="navbar-search">
-              <a href="#"></a>
+              <a href="search.html"></a>
               <div class="search-container">
                 <div class="search-popup">
                   <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
@@ -73,7 +73,7 @@
             </div>
 
             <div class="navbar-login">
-              <a class="login-button" href="#">Вход</a>
+              <a class="login-button" href="login.html">Вход</a>
               <div class="login-container">
                 <div class="login-block">
                   <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
@@ -93,7 +93,7 @@
             </div>
 
             <div class="navbar-cart cart-full">
-              <a class="cart-full-link" href="#">2 товара</a>
+              <a class="cart-full-link" href="cart.html">2 товара</a>
               <!--- Поп-ап корзины-->
               <div class="cart-container">
                 <section class="cart-popup">
@@ -167,7 +167,7 @@
 
         <div class="filters">
 
-          <form class="filter-form" action="https://echo.htmlacademy.ru" method="post">
+          <form id ="filter-form" class="filter-form" action="https://echo.htmlacademy.ru" method="post">
             <div class="filters-top">
 
               <fieldset class="filter-select-container">
@@ -241,7 +241,7 @@
                 </div>
               </fieldset>
 
-              <input class="btn-filter" type="submit" value="Применить">
+              <a class="btn-filter" href="#">Применить</a>
             </div>
           </form>
         </div>
@@ -375,7 +375,7 @@
       </footer>
     </div>
   </div>
-  <script type="text/javascript" src="js/script.js"></script>
+  <script type="text/javascript" src="js/script.min.js"></script>
 </body>
 
 </html>

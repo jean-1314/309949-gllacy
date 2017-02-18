@@ -28,10 +28,12 @@ img {
   background-image: url("../img/ice-cream1.png");
   background-repeat: no-repeat;
   background-position: top center;
+  -webkit-transition: background-image 0.5s ease, background-color 0.5s ease;
   transition: background-image 0.5s ease, background-color 0.5s ease;
 }
 
 .inner .site-wrapper {
+  background-image: -webkit-linear-gradient(top, #9db1a5 5%, #849d8f 40%);
   background-image: linear-gradient(to bottom, #9db1a5 5%, #849d8f 40%);
 }
 
@@ -71,6 +73,7 @@ img {
   display: inline-block;
   vertical-align: top;
   background: #f26843;
+  background: -webkit-linear-gradient(top, #f26843 0%, #e74a35 100%);
   background: linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
   color: #ffffff;
   font-weight: bold;
@@ -82,11 +85,13 @@ img {
 }
 
 .btn:hover {
+  background: -webkit-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
   background: linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
   box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
 }
 
 .btn:active {
+  background: -webkit-linear-gradient(top, #d84732 0%, #e1613e 100%);
   background: linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
   box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
 }
@@ -124,10 +129,7 @@ img {
   height: 22px;
   margin-right: 8px;
   margin-top: -3px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding: 5px 10px 5px 10px;
   color: #ffffff;
   text-decoration: none;
   font-size: 16px;
@@ -270,10 +272,6 @@ a.navbar-link.link-active::before  {
   vertical-align: middle;
   width: 155px;
   margin-top: 9px;
-}
-
-.logo.logo-inner {
-  margin-top: 4px;
 }
 
 .navbar-right {
@@ -778,11 +776,13 @@ a.navbar-link.link-active::before  {
 }
 
 .item-thumbnail::before {
-  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 .item-thumbnail::after {
-  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
 .item-thumbnail img {
@@ -983,12 +983,14 @@ a.navbar-link.link-active::before  {
 .specials-left {
   margin-right: 26px;
   background-image: url("../img/raspberry.jpg");
+  background-color: #b8163e;
   background-repeat: no-repeat;
   background-position: 22% 52%;
 }
 
 .specials-right {
   background-image: url("../img/choco.jpg");
+  background-color: #704833;
   background-repeat: no-repeat;
   background-position: 81% 47%;
 }
@@ -1192,6 +1194,7 @@ a.navbar-link.link-active::before  {
   margin-bottom: 40px;
   font-size: 0;
   background-image: url("../img/waffle.jpg");
+  background-color: #e7dabe;
   border-radius: 15px;
 }
 
@@ -1287,6 +1290,7 @@ a.navbar-link.link-active::before  {
   width: 560px;
   margin-right: 26px;
   background-image: url("../img/strawberry.jpg");
+  background-color: #ffffff;
   background-repeat: no-repeat;
   background-position: 17% 39%;
 }
@@ -1415,10 +1419,7 @@ a.navbar-link.link-active::before  {
   line-height: 24px;
   font-weight: bold;
   border: none;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding: 10px 15px 10px 15px;
   border-radius: 25px;
   overflow: hidden;
 }
@@ -1685,9 +1686,7 @@ a.navbar-link.link-active::before  {
   color: #ffbc9e;
 }
 
-
 /*Обратная связь*/
-
 
 .feedback {
   display: none;
@@ -1706,7 +1705,8 @@ a.navbar-link.link-active::before  {
 
 .feedback-show {
   display: block;
-  animation: appear 0.4s;
+  -webkit-animation: appear 0.4s;
+          animation: appear 0.4s;
 }
 
 .feedback-close {
@@ -1734,11 +1734,13 @@ a.navbar-link.link-active::before  {
 }
 
 .feedback-close::before {
-  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 .feedback-close::after {
-  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
 .feedback strong {
@@ -1966,19 +1968,31 @@ a.navbar-link.link-active::before  {
   background: rgba(0, 0, 0, 0.5);
 }
 
-@keyframes appear {
+@-webkit-keyframes appear {
     0% {
-      transform: scale(0, 0);
+      -webkit-transform: scale(0, 0);
+              transform: scale(0, 0);
     }
     100% {
-      transform: scale(1, 1);
+      -webkit-transform: scale(1, 1);
+              transform: scale(1, 1);
+    }    
+}
+
+@keyframes appear {
+    0% {
+      -webkit-transform: scale(0, 0);
+              transform: scale(0, 0);
+    }
+    100% {
+      -webkit-transform: scale(1, 1);
+              transform: scale(1, 1);
     }    
 }
 
 .modal-overlay-show {
   display: block;
 }
-
 
 /*inner.html*/
 
@@ -2078,6 +2092,7 @@ a.navbar-link.link-active::before  {
 
 .filter-form fieldset {
   display: inline-block;
+  vertical-align: top;
   border: none;
   padding: 0;
   margin: 0;
@@ -2340,16 +2355,21 @@ input[type="radio"]:disabled + label::after {
 }
 
 .btn-filter {
+  display: inline-block;
+  vertical-align: middle;
   width: 144px;
   border: 2px solid #ffffff;
+  text-align: center;
   border-radius: 25px;
-  min-height: 36px;
   margin-top: 20px;
+  padding-top: 7px;
+  padding-bottom: 7px;
   background-color: rgba(255, 255, 255, 0.2);
   color: #ffffff;
   font-size: 16px;
   line-height: 18px;
   font-weight: 500;
+  text-decoration: none;
   outline: none;
 }
 
